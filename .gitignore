@@ -398,3 +398,8 @@ FodyWeavers.xsd
 *.sln.iml
 
 **/wwwroot/upload
+
+.tye/*
+
+!**/Http/Log
+!**/Services/Log
