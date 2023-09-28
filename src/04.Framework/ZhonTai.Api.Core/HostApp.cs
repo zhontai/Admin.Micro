@@ -671,6 +671,8 @@ public class HostApp
                 };
                 return new DistributedCache(redisClient);
             });
+
+            services.AddSingleton<WorkerNode>().AddHostedService<WorkerNodeHostedService>();
         }
         else
         {
@@ -678,11 +680,11 @@ public class HostApp
             services.AddSingleton<ICache, MemoryCache>();
             //分布式内存缓存
             services.AddDistributedMemoryCache();
+
+            IdHelper.SetIdGenerator((ushort)1);
         }
 
         #endregion 缓存
-
-        services.AddSingleton<WorkerNode>().AddHostedService<WorkerNodeHostedService>();
 
         #region IP限流
 

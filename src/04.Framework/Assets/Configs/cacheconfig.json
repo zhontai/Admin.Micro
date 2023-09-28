@@ -2,7 +2,7 @@
   "ApiConfig": {
     "CacheConfig": {
       //缓存类型 Memory = 0, Redis = 1
-      "Type": "Redis",
+      "Type": "Memory",
       //连接字符串
       "ConnectionString": "127.0.0.1:6379,password=welcome1!,defaultDatabase=0"
     }
