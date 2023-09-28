@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>中台接口远程调用Grpc库</Description>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<NoWarn>1701;1702;1591;8632</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../../../logo.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Grpc.Core.Api" Version="2.56.0" />
+		<PackageReference Include="Grpc.Net.ClientFactory" Version="2.56.0" />
+		<PackageReference Include="Grpc.AspNetCore.Server" Version="2.56.0" />
+		<PackageReference Include="protobuf-net.Grpc" Version="1.1.1" />
+		<PackageReference Include="protobuf-net.Grpc.AspNetCore" Version="1.1.1" />
+		<PackageReference Include="protobuf-net.Grpc.AspNetCore.Reflection" Version="1.1.1" />
+		<PackageReference Include="protobuf-net.Grpc.ClientFactory" Version="1.1.1" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+		<PackageReference Include="System.ServiceModel.Primitives" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ZhonTai.Api.Rpc\ZhonTai.Api.Rpc.csproj" />
+		<ProjectReference Include="..\ZhonTai.Utils\ZhonTai.Utils.csproj" />
+	</ItemGroup>
+</Project>

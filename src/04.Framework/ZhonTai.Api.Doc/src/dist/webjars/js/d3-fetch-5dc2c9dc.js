@@ -1,0 +1,1 @@
+function a(t){if(!t.ok)throw new Error(t.status+" "+t.statusText);return t.text()}function u(t,r){return fetch(t,r).then(a)}function s(t){return(r,e)=>u(r,e).then(n=>new DOMParser().parseFromString(n,t))}var i=s("image/svg+xml");export{i as s};

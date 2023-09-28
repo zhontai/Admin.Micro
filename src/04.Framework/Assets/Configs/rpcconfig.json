@@ -1,0 +1,13 @@
+{
+  "ApiConfig": {
+    "RpcConfig": {
+      "AddressList": [
+        {
+          "ModuleName": "admin",
+          "ApiUrl": "http://localhost:11010",
+          "GrpcUrl": "http://localhost:11011"
+        }
+      ]
+    }
+  }
+}

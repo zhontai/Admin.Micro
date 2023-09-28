@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>中台Admin权限管理接口契约库</Description>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>ZhonTai.Module.Admin.Contracts.xml</DocumentationFile>
+		<NoWarn>1701;1702;1591;8632;RF001;</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../../../../logo.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Grpc\" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.11" />
+		<PackageReference Include="Refit" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\04.Framework\ZhonTai.Api.Rpc\ZhonTai.Api.Rpc.csproj" />
+	</ItemGroup>
+</Project>

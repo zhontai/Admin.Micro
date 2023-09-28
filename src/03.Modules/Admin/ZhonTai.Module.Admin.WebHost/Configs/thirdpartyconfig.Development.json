@@ -1,0 +1,59 @@
+{
+  "ThirdPartyConfig": {
+    "NacosConfig": {
+      "ConfigUseRpc": true,
+      "NamingUseRpc": true,
+      "Optional": false,
+      "ServerAddresses": [ "http://localhost:8848" ],
+      "Namespace": "Dev",
+      "ConfigFilterAssemblies": [ "ZhonTai.Module.Admin.WebHost" ],
+      "Listeners": [
+        {
+          "Optional": false,
+          "Group": "Admin",
+          "DataId": "DbConfig"
+        }
+      ]
+    },
+    "SlideCaptcha": {
+      "ExpirySeconds": 300, // 缓存过期时长
+      "StoreageKeyPrefix": "admin:captcha:", // 缓存前缀
+      "Tolerant": 0.02, // 容错值(校验时用，缺口位置与实际滑动位置匹配容错范围)
+      "Backgrounds": [ // 背景图配置
+        {
+          "Type": "file",
+          "Data": "wwwroot/captcha/jigsaw/backgrounds/1.jpg"
+        },
+        {
+          "Type": "file",
+          "Data": "wwwroot/captcha/jigsaw/backgrounds/2.jpg"
+        },
+        {
+          "Type": "file",
+          "Data": "wwwroot/captcha/jigsaw/backgrounds/3.jpg"
+        },
+        {
+          "Type": "file",
+          "Data": "wwwroot/captcha/jigsaw/backgrounds/4.jpg"
+        },
+        {
+          "Type": "file",
+          "Data": "wwwroot/captcha/jigsaw/backgrounds/5.jpg"
+        }
+      ],
+      // Templates不配置，则使用默认模板
+      "Templates": [
+        //{
+        //  "Slider": {
+        //    "Type": "file",
+        //    "Data": "wwwroot/captcha/jigsaw/templates/1/slider.png"
+        //  },
+        //  "Hole": {
+        //    "Type": "file",
+        //    "Data": "wwwroot/captcha/jigsaw/templates/1/hole.png"
+        //  }
+        //}
+      ]
+    }
+  }
+}

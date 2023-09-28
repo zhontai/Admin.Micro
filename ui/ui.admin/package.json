@@ -1,0 +1,87 @@
+{
+  "name": "admin.ui.plus",
+  "version": "2.2.4",
+  "description": "vue3 vite admin plus",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --force",
+    "build": "vite build",
+    "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue src/",
+    "format": "npx prettier --write .",
+    "install:pkg": "npm install --registry https://registry.npmmirror.com",
+    "gen:api": "node ./gen/gen-api"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^5.1.12",
+    "axios": "^1.5.0",
+    "countup.js": "^2.8.0",
+    "cropperjs": "^1.6.1",
+    "echarts": "^5.4.3",
+    "echarts-gl": "^2.0.9",
+    "echarts-wordcloud": "^2.1.0",
+    "element-plus": "2.3.14",
+    "js-cookie": "^3.0.5",
+    "js-table2excel": "^1.1.2",
+    "jsplumb": "^2.15.6",
+    "mitt": "^3.0.1",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.1.6",
+    "print-js": "^1.6.0",
+    "qrcodejs2-fixes": "^0.0.2",
+    "qs": "^6.11.2",
+    "screenfull": "^6.0.2",
+    "sortablejs": "^1.15.0",
+    "splitpanes": "^3.1.5",
+    "vue": "^3.3.4",
+    "vue-clipboard3": "^2.0.0",
+    "vue-demi": "^0.14.5",
+    "vue-grid-layout": "^3.0.0-beta1",
+    "vue-i18n": "^9.4.1",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.3",
+    "@types/nprogress": "^0.2.0",
+    "@types/sortablejs": "^1.15.2",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vue/compiler-sfc": "^3.3.4",
+    "dotenv": "16.3.1",
+    "eslint": "^8.50.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "prettier": "^3.0.3",
+    "sass": "^1.68.0",
+    "swagger-typescript-api": "13.0.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vite-plugin-vue-setup-extend-plus": "^0.1.0",
+    "vue-eslint-parser": "^9.3.1",
+    "vite-plugin-compression": "0.5.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "bugs": {
+    "url": "https://github.com/zhontai/admin.ui.plus/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">= 7.0.0"
+  },
+  "keywords": [
+    "vue3",
+    "element-plus",
+    "zhontai",
+    "admin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhontai/admin.ui.plus/git"
+  }
+}

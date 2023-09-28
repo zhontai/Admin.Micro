@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZhonTai.Module.App.Api</name>
+    </assembly>
+    <members>
+        <member name="T:ZhonTai.Module.App.Api.Core.Attributes.AppTransactionAttribute">
+            <summary>
+            启用事物
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Core.Consts.ApiConsts">
+            <summary>
+            接口常量
+            </summary>
+        </member>
+        <member name="F:ZhonTai.Module.App.Api.Core.Consts.ApiConsts.AreaName">
+            <summary>
+            默认域
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Core.Consts.CacheKeys">
+            <summary>
+            缓存键
+            </summary>
+        </member>
+        <member name="F:ZhonTai.Module.App.Api.Core.Consts.CacheKeys.ModuleActionKey">
+            <summary>
+            模块缓存键 module:action:{id}
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Core.Consts.DbKeys">
+            <summary>
+            数据库键名
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.App.Api.Core.Consts.DbKeys.AppDb">
+            <summary>
+            数据库注册键
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Core.Handlers.AppCustomTaskHandler">
+            <summary>
+            模块自定义任务处理器
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Domain.Module.Dto.ModuleGetPageDto">
+            <summary>
+            模块分页
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.App.Api.Domain.Module.Dto.ModuleGetPageDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Domain.Module.IModuleRepository">
+            <summary>
+            模块仓储接口
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Domain.Module.ModuleEntity">
+            <summary>
+            模块
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.App.Api.Domain.Module.ModuleEntity.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Domain.Module.Output.ModuleDataOutput">
+            <summary>
+            模块导出
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.App.Api.Domain.Module.Output.ModuleDataOutput.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.App.Api.Domain.Module.Output.ModuleDataOutput.Id">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.App.Api.Domain.Module.Output.ModuleDataOutput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Repositories.ModuleRepository">
+            <summary>
+            模块仓储
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Services.Module.IModuleService">
+            <summary>
+            模块接口
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Services.Module.Input.ModuleAddInput">
+            <summary>
+            添加模块
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.App.Api.Services.Module.Input.ModuleAddInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Services.Module.Input.ModuleUpdateInput">
+            <summary>
+            修改模块
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.App.Api.Services.Module.Input.ModuleUpdateInput.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.App.Api.Services.Module.Input.ModuleUpdateInput.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Services.Module.ModuleService">
+            <summary>
+            模块服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.App.Api.Services.Module.ModuleService.GetAsync(System.Int64)">
+            <summary>
+            查询模块
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.App.Api.Services.Module.ModuleService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.App.Api.Domain.Module.Dto.ModuleGetPageDto})">
+            <summary>
+            查询分页
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.App.Api.Services.Module.ModuleService.AddAsync(ZhonTai.Module.App.Api.Services.Module.Input.ModuleAddInput)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.App.Api.Services.Module.ModuleService.UpdateAsync(ZhonTai.Module.App.Api.Services.Module.Input.ModuleUpdateInput)">
+            <summary>
+            修改
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.App.Api.Services.Module.ModuleService.DeleteAsync(System.Int64)">
+            <summary>
+            彻底删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.App.Api.Services.Module.ModuleService.SoftDeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.App.Api.Services.Module.ModuleService.BatchSoftDeleteAsync(System.Int64[])">
+            <summary>
+            批量删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Services.Module.Output.ModuleGetOutput">
+            <summary>
+            模块
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.App.Api.Services.Module.Output.ModuleListOutput">
+            <summary>
+            模块列表
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.App.Api.Services.Module.Output.ModuleListOutput.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.App.Api.Services.Module.Output.ModuleListOutput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+    </members>
+</doc>

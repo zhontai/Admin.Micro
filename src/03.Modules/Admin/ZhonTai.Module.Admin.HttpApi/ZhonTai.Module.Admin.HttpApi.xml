@@ -1,0 +1,2708 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZhonTai.Module.Admin.HttpApi</name>
+    </assembly>
+    <members>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Core.Configs.OSSOption">
+            <summary>
+            OSS配置
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Core.Configs.OSSOption.BucketName">
+            <summary>
+            存储桶
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Core.Configs.OSSOption.Url">
+            <summary>
+            文件地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Core.Configs.OSSOption.Md5">
+            <summary>
+            文件Md5码
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Core.Configs.OSSOption.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Core.Configs.LocalUploadConfig">
+            <summary>
+            本地上传配置
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Core.Configs.LocalUploadConfig.Directory">
+            <summary>
+            上传目录
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Core.Configs.LocalUploadConfig.DateTimeDirectory">
+            <summary>
+            日期目录
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Core.Configs.LocalUploadConfig.Md5">
+            <summary>
+            文件Md5码
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Core.Configs.LocalUploadConfig.MaxSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Core.Configs.LocalUploadConfig.IncludeExtension">
+            <summary>
+            包含文件拓展名列表
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Core.Configs.LocalUploadConfig.ExcludeExtension">
+            <summary>
+            排除文件拓展名列表
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Core.Configs.OSSConfig">
+            <summary>
+            OSS配置
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Core.Configs.OSSConfig.LocalUploadConfig">
+            <summary>
+            本地上传配置
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Core.Configs.OSSConfig.Provider">
+            <summary>
+            文件存储供应商
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Core.Configs.OSSConfig.OSSConfigs">
+            <summary>
+            OSS配置列表
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Repositories.CustomGenerateData">
+            <summary>
+            生成数据
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData">
+            <summary>
+            同步数据
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitDictTypeAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig)">
+            <summary>
+            初始化字典类型
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitDictAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig)">
+            <summary>
+            初始化字典
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitUserAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig,System.Boolean)">
+            <summary>
+            初始化用户
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <param name="isTenant"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitUserStaffAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig,System.Boolean)">
+            <summary>
+            初始化用户员工
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <param name="isTenant"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitOrgAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig,System.Boolean)">
+            <summary>
+            初始化部门
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <param name="isTenant"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitRoleAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig,System.Boolean)">
+            <summary>
+            初始化角色
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <param name="isTenant"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitApiAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig)">
+            <summary>
+            初始化接口
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitViewAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig)">
+            <summary>
+            初始化视图
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitPermissionAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig)">
+            <summary>
+            初始化权限
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitPermissionApiAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig)">
+            <summary>
+            初始化权限接口
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.UserRoleRecord">
+            <summary>
+            用户角色记录
+            </summary>
+            <param name="UserId"></param>
+            <param name="RoleId"></param>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.UserRoleRecord.#ctor(System.Int64,System.Int64)">
+            <summary>
+            用户角色记录
+            </summary>
+            <param name="UserId"></param>
+            <param name="RoleId"></param>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.UserRoleRecord.UserId">
+            <summary></summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.UserRoleRecord.RoleId">
+            <summary></summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitUserRoleAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig)">
+            <summary>
+            初始化用户角色
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.UserOrgRecord">
+            <summary>
+            用户部门记录
+            </summary>
+            <param name="UserId"></param>
+            <param name="OrgId"></param>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.UserOrgRecord.#ctor(System.Int64,System.Int64)">
+            <summary>
+            用户部门记录
+            </summary>
+            <param name="UserId"></param>
+            <param name="OrgId"></param>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.UserOrgRecord.UserId">
+            <summary></summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.UserOrgRecord.OrgId">
+            <summary></summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitUserOrgAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig)">
+            <summary>
+            初始化用户部门
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.RolePermissionRecord">
+            <summary>
+            角色权限记录
+            </summary>
+            <param name="RoleId"></param>
+            <param name="PermissionId"></param>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.RolePermissionRecord.#ctor(System.Int64,System.Int64)">
+            <summary>
+            角色权限记录
+            </summary>
+            <param name="RoleId"></param>
+            <param name="PermissionId"></param>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.RolePermissionRecord.RoleId">
+            <summary></summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.RolePermissionRecord.PermissionId">
+            <summary></summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitRolePermissionAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig)">
+            <summary>
+            初始化角色权限
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitTenantAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig)">
+            <summary>
+            初始化租户
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.TenantPermissionRecord">
+            <summary>
+            租户权限记录
+            </summary>
+            <param name="TenantId"></param>
+            <param name="PermissionId"></param>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.TenantPermissionRecord.#ctor(System.Int64,System.Int64)">
+            <summary>
+            租户权限记录
+            </summary>
+            <param name="TenantId"></param>
+            <param name="PermissionId"></param>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.TenantPermissionRecord.TenantId">
+            <summary></summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.TenantPermissionRecord.PermissionId">
+            <summary></summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.InitTenantPermissionAsync(IFreeSql,FreeSql.IRepositoryUnitOfWork,ZhonTai.Api.Core.Configs.DbConfig)">
+            <summary>
+            初始化租户权限
+            </summary>
+            <param name="db"></param>
+            <param name="unitOfWork"></param>
+            <param name="dbConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.CustomSyncData.SyncDataAsync(IFreeSql,ZhonTai.Api.Core.Configs.DbConfig,ZhonTai.Api.Core.Configs.AppConfig)">
+            <summary>
+            同步数据
+            </summary>
+            <param name="db"></param>
+            <param name="dbConfig"></param>
+            <param name="appConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Repositories.AdminRepositoryBase`1">
+            <summary>
+            权限库基础仓储
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.OrgRepository.GetChildIdListAsync(System.Int64)">
+            <summary>
+            获得本部门和下级部门Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.PkgRepository.GetChildIdListAsync(System.Int64)">
+            <summary>
+            获得本角色和下级角色Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.PkgRepository.GetChildIdListAsync(System.Int64[])">
+            <summary>
+            获得当前角色和下级角色Id
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.RoleRepository.GetChildIdListAsync(System.Int64)">
+            <summary>
+            获得本角色和下级角色Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.RoleRepository.GetChildIdListAsync(System.Int64[])">
+            <summary>
+            获得当前角色和下级角色Id
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.UserOrgRepository.HasUser(System.Int64)">
+            <summary>
+            本部门下是否有员工
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Repositories.UserOrgRepository.HasUser(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            部门列表下是否有员工
+            </summary>
+            <param name="idList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.Api.ApiEntity">
+            <summary>
+            接口管理
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Api.ApiEntity.ParentId">
+            <summary>
+            所属模块
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Api.ApiEntity.Name">
+            <summary>
+            接口命名
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Api.ApiEntity.Label">
+            <summary>
+            接口名称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Api.ApiEntity.Path">
+            <summary>
+            接口地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Api.ApiEntity.HttpMethods">
+            <summary>
+            接口提交方法
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Api.ApiEntity.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Api.ApiEntity.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Api.ApiEntity.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.AppLog.AppLogEntity">
+            <summary>
+            应用程序日志
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.AppLog.AppLogEntity.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.DictType.DictTypeEntity">
+            <summary>
+            数据字典类型
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.DictType.DictTypeEntity.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.DictType.DictTypeEntity.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.DictType.DictTypeEntity.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.DictType.DictTypeEntity.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.DictType.DictTypeEntity.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.Dict.DictEntity">
+            <summary>
+            数据字典
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Dict.DictEntity.DictTypeId">
+            <summary>
+            字典类型Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Dict.DictEntity.DictType">
+            <summary>
+            字典类型
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Dict.DictEntity.Name">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Dict.DictEntity.Code">
+            <summary>
+            字典编码
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Dict.DictEntity.Value">
+            <summary>
+            字典值
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Dict.DictEntity.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Dict.DictEntity.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Dict.DictEntity.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.DocImage.DocImageEntity">
+            <summary>
+            文档图片
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.DocImage.DocImageEntity.DocId">
+            <summary>
+            文档Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.DocImage.DocImageEntity.Url">
+            <summary>
+            请求路径
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.Doc.DocEntity">
+            <summary>
+            文档
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Doc.DocEntity.ParentId">
+            <summary>
+            父级节点
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Doc.DocEntity.Label">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Doc.DocEntity.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Doc.DocEntity.Name">
+            <summary>
+            命名
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Doc.DocEntity.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Doc.DocEntity.Html">
+            <summary>
+            Html
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Doc.DocEntity.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Doc.DocEntity.Opened">
+            <summary>
+            打开组
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Doc.DocEntity.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Doc.DocEntity.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.File.FileEntity">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.File.FileEntity.Provider">
+            <summary>
+            OSS供应商
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.File.FileEntity.BucketName">
+            <summary>
+            存储桶名称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.File.FileEntity.FileDirectory">
+            <summary>
+            文件目录
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.File.FileEntity.FileGuid">
+            <summary>
+            文件Guid
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.File.FileEntity.SaveFileName">
+            <summary>
+            保存文件名
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.File.FileEntity.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.File.FileEntity.Extension">
+            <summary>
+            文件扩展名
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.File.FileEntity.Size">
+            <summary>
+            文件字节长度
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.File.FileEntity.SizeFormat">
+            <summary>
+            文件大小格式化
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.File.FileEntity.LinkUrl">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.File.FileEntity.Md5">
+            <summary>
+            md5码，防止上传重复文件
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.LoginLog.LoginLogEntity">
+            <summary>
+            登录日志
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.LogAbstract">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.LogAbstract.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.LogAbstract.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.LogAbstract.IP">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.LogAbstract.Browser">
+            <summary>
+            浏览器
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.LogAbstract.Os">
+            <summary>
+            操作系统
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.LogAbstract.Device">
+            <summary>
+            设备
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.LogAbstract.BrowserInfo">
+            <summary>
+            浏览器信息
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.LogAbstract.ElapsedMilliseconds">
+            <summary>
+            耗时（毫秒）
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.LogAbstract.Status">
+            <summary>
+            操作状态
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.LogAbstract.Msg">
+            <summary>
+            操作消息
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.LogAbstract.Result">
+            <summary>
+            操作结果
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.OprationLog.OprationLogEntity">
+            <summary>
+            操作日志
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.OprationLog.OprationLogEntity.ApiLabel">
+            <summary>
+            接口名称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.OprationLog.OprationLogEntity.ApiPath">
+            <summary>
+            接口地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.OprationLog.OprationLogEntity.ApiMethod">
+            <summary>
+            接口提交方法
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.OprationLog.OprationLogEntity.Params">
+            <summary>
+            操作参数
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Domain.Org.IOrgRepository.GetChildIdListAsync(System.Int64)">
+            <summary>
+            获得本部门和下级部门Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.Org.OrgEntity">
+            <summary>
+            组织架构
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Org.OrgEntity.ParentId">
+            <summary>
+            父级
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Org.OrgEntity.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Org.OrgEntity.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Org.OrgEntity.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Org.OrgEntity.MemberCount">
+            <summary>
+            成员数
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Org.OrgEntity.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Org.OrgEntity.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Org.OrgEntity.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Org.OrgEntity.Staffs">
+            <summary>
+            员工列表
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Org.OrgEntity.Users">
+            <summary>
+            用户列表
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Org.OrgEntity.Roles">
+            <summary>
+            角色列表
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Org.OrgEntity.Childs">
+            <summary>
+            子级列表
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.PermissionApi.PermissionApiEntity">
+            <summary>
+            权限接口
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.PermissionApi.PermissionApiEntity.PermissionId">
+            <summary>
+            权限Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.PermissionApi.PermissionApiEntity.Permission">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.PermissionApi.PermissionApiEntity.ApiId">
+            <summary>
+            接口Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.PermissionApi.PermissionApiEntity.Api">
+            <summary>
+            接口
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.ParentId">
+            <summary>
+            父级节点
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.Label">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.Code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.Type">
+            <summary>
+            权限类型
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.ViewId">
+            <summary>
+            视图Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.View">
+            <summary>
+            视图
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.Name">
+            <summary>
+            路由命名
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.Path">
+            <summary>
+            路由地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.Redirect">
+            <summary>
+            重定向地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.Hidden">
+            <summary>
+            隐藏
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.Opened">
+            <summary>
+            展开分组
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.NewWindow">
+            <summary>
+            打开新窗口
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.External">
+            <summary>
+            链接外显
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.IsKeepAlive">
+            <summary>
+            是否缓存
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.IsAffix">
+            <summary>
+            是否固定
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.Link">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.IsIframe">
+            <summary>
+            是否内嵌窗口
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Permission.PermissionEntity.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.PkgPermission.PkgPermissionEntity">
+            <summary>
+            套餐权限
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.PkgPermission.PkgPermissionEntity.PkgId">
+            <summary>
+            套餐Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.PkgPermission.PkgPermissionEntity.Pkg">
+            <summary>
+            套餐
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.PkgPermission.PkgPermissionEntity.PermissionId">
+            <summary>
+            权限Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.PkgPermission.PkgPermissionEntity.Permission">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Domain.Pkg.IPkgRepository.GetChildIdListAsync(System.Int64)">
+            <summary>
+            获得本套餐和下级套餐Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Domain.Pkg.IPkgRepository.GetChildIdListAsync(System.Int64[])">
+            <summary>
+            获得当前套餐和下级套餐Id
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.Pkg.PkgEntity">
+            <summary>
+            套餐
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Pkg.PkgEntity.ParentId">
+            <summary>
+            父级Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Pkg.PkgEntity.Childs">
+            <summary>
+            子级列表
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Pkg.PkgEntity.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Pkg.PkgEntity.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Pkg.PkgEntity.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Pkg.PkgEntity.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Pkg.PkgEntity.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Pkg.PkgEntity.Tenants">
+            <summary>
+            租户列表
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Pkg.PkgEntity.Permissions">
+            <summary>
+            权限列表
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.RoleOrgEntity">
+            <summary>
+            角色部门
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.RoleOrgEntity.RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.RoleOrgEntity.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.RoleOrgEntity.OrgId">
+            <summary>
+            部门Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.RoleOrgEntity.Org">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.RolePermission.RolePermissionEntity">
+            <summary>
+            角色权限
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.RolePermission.RolePermissionEntity.RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.RolePermission.RolePermissionEntity.PermissionId">
+            <summary>
+            权限Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.RolePermission.RolePermissionEntity.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.RolePermission.RolePermissionEntity.Permission">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Domain.Role.IRoleRepository.GetChildIdListAsync(System.Int64)">
+            <summary>
+            获得本角色和下级角色Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Domain.Role.IRoleRepository.GetChildIdListAsync(System.Int64[])">
+            <summary>
+            获得当前角色和下级角色Id
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.Role.RoleEntity">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Role.RoleEntity.ParentId">
+            <summary>
+            父级Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Role.RoleEntity.Childs">
+            <summary>
+            子级列表
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Role.RoleEntity.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Role.RoleEntity.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Role.RoleEntity.Type">
+            <summary>
+            角色类型
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Role.RoleEntity.DataScope">
+            <summary>
+            数据范围
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Role.RoleEntity.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Role.RoleEntity.Hidden">
+            <summary>
+            隐藏
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Role.RoleEntity.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Role.RoleEntity.Users">
+            <summary>
+            用户列表
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Role.RoleEntity.Orgs">
+            <summary>
+            部门列表
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Role.RoleEntity.Permissions">
+            <summary>
+            权限列表
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.TenantPermission.TenantPermissionEntity">
+            <summary>
+            租户权限
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.TenantPermission.TenantPermissionEntity.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.TenantPermission.TenantPermissionEntity.PermissionId">
+            <summary>
+            权限Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.TenantPermission.TenantPermissionEntity.Tenant">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.TenantPermission.TenantPermissionEntity.Permission">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.TenantPkg.TenantPkgEntity">
+            <summary>
+            租户套餐
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.TenantPkg.TenantPkgEntity.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.TenantPkg.TenantPkgEntity.PkgId">
+            <summary>
+            套餐Id
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.Tenant.TenantEntity">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Tenant.TenantEntity.UserId">
+            <summary>
+            授权用户
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Tenant.TenantEntity.User">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Tenant.TenantEntity.OrgId">
+            <summary>
+            授权部门
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Tenant.TenantEntity.Org">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Tenant.TenantEntity.TenantType">
+            <summary>
+            租户类型
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Tenant.TenantEntity.DbKey">
+            <summary>
+            数据库注册键
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Tenant.TenantEntity.DbType">
+            <summary>
+            数据库
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Tenant.TenantEntity.ConnectionString">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Tenant.TenantEntity.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Tenant.TenantEntity.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.Tenant.TenantEntity.Pkgs">
+            <summary>
+            套餐列表
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Domain.UserOrg.IUserOrgRepository.HasUser(System.Int64)">
+            <summary>
+            本部门下是否有员工
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Domain.UserOrg.IUserOrgRepository.HasUser(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            部门列表下是否有员工
+            </summary>
+            <param name="idList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.UserOrg.UserOrgEntity">
+            <summary>
+            用户所属部门
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.UserOrg.UserOrgEntity.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.UserOrg.UserOrgEntity.User">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.UserOrg.UserOrgEntity.OrgId">
+            <summary>
+            部门Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.UserOrg.UserOrgEntity.Org">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.UserOrg.UserOrgEntity.IsManager">
+            <summary>
+            是否主管
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.UserRole.UserRoleEntity">
+            <summary>
+            用户角色
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.UserRole.UserRoleEntity.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.UserRole.UserRoleEntity.RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.UserStaff.UserStaffEntity">
+            <summary>
+            用户员工
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.UserStaff.UserStaffEntity.Position">
+            <summary>
+            职位
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.UserStaff.UserStaffEntity.JobNumber">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.UserStaff.UserStaffEntity.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.UserStaff.UserStaffEntity.EntryTime">
+            <summary>
+            入职时间
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.UserStaff.UserStaffEntity.WorkWeChatCard">
+            <summary>
+            企业微信名片
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.UserStaff.UserStaffEntity.Introduce">
+            <summary>
+            个人简介
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.UserName">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.PasswordEncryptType">
+            <summary>
+            密码加密类型
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.OrgId">
+            <summary>
+            主属部门Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.Org">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.ManagerUserId">
+            <summary>
+            直属主管Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.ManagerUser">
+            <summary>
+            直属主管
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.Status">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.Type">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.Roles">
+            <summary>
+            角色列表
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.Orgs">
+            <summary>
+            部门列表
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.User.UserEntity.Staff">
+            <summary>
+            员工
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.View.ViewEntity">
+            <summary>
+            视图管理
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.View.ViewEntity.ParentId">
+            <summary>
+            所属节点
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.View.ViewEntity.Name">
+            <summary>
+            视图命名
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.View.ViewEntity.Label">
+            <summary>
+            视图名称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.View.ViewEntity.Path">
+            <summary>
+            视图路径
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.View.ViewEntity.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.View.ViewEntity.Cache">
+            <summary>
+            缓存
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.View.ViewEntity.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.View.ViewEntity.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.ApiService">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ApiService.GetAsync(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ApiService.GetListAsync(System.String)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ApiService.AddAsync(ZhonTai.Module.Admin.Contracts.Http.ApiAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ApiService.UpdateAsync(ZhonTai.Module.Admin.Contracts.Http.ApiUpdatedRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ApiService.DeleteAsync(System.Int64)">
+            <summary>
+            彻底删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ApiService.BatchDeleteAsync(System.Int64[])">
+            <summary>
+            批量彻底删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ApiService.SoftDeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ApiService.BatchSoftDeleteAsync(System.Int64[])">
+            <summary>
+            批量删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ApiService.SyncAsync(ZhonTai.Module.Admin.Contracts.Http.ApiSyncdRequest)">
+            <summary>
+            同步
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.AuthService">
+            <summary>
+            认证授权服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.AuthService.GetToken(ZhonTai.Module.Admin.Contracts.Http.AuthGetTokenRequest)">
+            <summary>
+            获得token
+            </summary>
+            <param name="user">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.AuthService.GetPasswordEncryptKeyAsync">
+            <summary>
+            查询密钥
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.AuthService.GetUserProfileAsync">
+            <summary>
+            查询用户个人信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.AuthService.GetUserMenusAsync">
+            <summary>
+            查询用户菜单列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.AuthService.GetUserPermissionsAsync">
+            <summary>
+            查询用户权限列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.AuthService.GetUserInfoAsync">
+            <summary>
+            查询用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.AuthService.LoginAsync(ZhonTai.Module.Admin.Contracts.Http.AuthLoginRequest)">
+            <summary>
+            登录
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.AuthService.MobileLoginAsync(ZhonTai.Module.Admin.Contracts.Http.AuthMobileLoginRequest)">
+            <summary>
+            手机号登录
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.AuthService.Refresh(System.String)">
+            <summary>
+            刷新Token
+            以旧换新
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.AuthService.IsCaptcha">
+            <summary>
+            是否开启验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.CacheService">
+            <summary>
+            缓存服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.CacheService.GetList">
+            <summary>
+            查询列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.CacheService.ClearAsync(System.String)">
+            <summary>
+            清除缓存
+            </summary>
+            <param name="cacheKey">缓存键</param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.CaptchaService">
+            <summary>
+            验证码服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.CaptchaService.Generate(System.String)">
+            <summary>
+            生成
+            </summary>
+            <param name="captchaId">验证码id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.CaptchaService.CheckAsync(System.String,ZhonTai.Module.Admin.Contracts.Http.SmsSendCodeRequest.Models.SlideTrack)">
+            <summary>
+            验证
+            </summary>
+            <param name="captchaId">验证码id</param>
+            <param name="track">滑动轨迹</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ISlideCaptcha.Validate(System.String,ZhonTai.Module.Admin.Contracts.Http.SmsSendCodeRequest.Models.SlideTrack,System.Boolean)">
+            <summary>
+            校验
+            </summary>
+            <param name="captchaId">验证码id</param>
+            <param name="slideTrack">滑动轨迹</param>
+            <param name="removeIfSuccess">校验成功时是否移除缓存(用于多次验证)</param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.DictService">
+            <summary>
+            数据字典服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictService.GetAsync(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.DictGetPageFilter})">
+            <summary>
+            查询分页
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictService.GetListAsync(System.String[])">
+            <summary>
+            查询列表
+            </summary>
+            <param name="codes">字典类型编码列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictService.GetListByNamesAsync(System.String[])">
+            <summary>
+            根据字典类型名称列表查询字典列表
+            </summary>
+            <param name="names">字典类型名称列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictService.AddAsync(ZhonTai.Module.Admin.Contracts.Http.DictAddRequest)">
+            <summary>
+            新增
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictService.UpdateAsync(ZhonTai.Module.Admin.Contracts.Http.DictUpdateRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictService.DeleteAsync(System.Int64)">
+            <summary>
+            彻底删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictService.BatchDeleteAsync(System.Int64[])">
+            <summary>
+            批量彻底删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictService.SoftDeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictService.BatchSoftDeleteAsync(System.Int64[])">
+            <summary>
+            批量删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.DictTypeService">
+            <summary>
+            数据字典类型服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictTypeService.GetAsync(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictTypeService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.DictTypeGetPageFilter})">
+            <summary>
+            查询分页
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictTypeService.AddAsync(ZhonTai.Module.Admin.Contracts.Http.DictTypeAddRequest)">
+            <summary>
+            新增
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictTypeService.UpdateAsync(ZhonTai.Module.Admin.Contracts.Http.DictTypeUpdateRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictTypeService.DeleteAsync(System.Int64)">
+            <summary>
+            彻底删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictTypeService.BatchDeleteAsync(System.Int64[])">
+            <summary>
+            批量彻底删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictTypeService.SoftDeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictTypeService.BatchSoftDeleteAsync(System.Int64[])">
+            <summary>
+            批量删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.DocService">
+            <summary>
+            文档服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.GetGroupAsync(System.Int64)">
+            <summary>
+            查询分组
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.GetMenuAsync(System.Int64)">
+            <summary>
+            查询菜单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.GetContentAsync(System.Int64)">
+            <summary>
+            查询文档内容
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.GetListAsync(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            查询文档列表
+            </summary>
+            <param name="key"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.GetImageListAsync(System.Int64)">
+            <summary>
+            查询图片列表
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.AddGroupAsync(ZhonTai.Module.Admin.Contracts.Http.DocAddGroupRequest)">
+            <summary>
+            新增分组
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.AddMenuAsync(ZhonTai.Module.Admin.Contracts.Http.DocAddMenuRequest)">
+            <summary>
+            新增菜单
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.AddImageAsync(ZhonTai.Module.Admin.Contracts.Http.DocAddImageRequest)">
+            <summary>
+            新增图片
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.UpdateGroupAsync(ZhonTai.Module.Admin.Contracts.Http.DocUpdateGroupRequest)">
+            <summary>
+            修改分组
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.UpdateMenuAsync(ZhonTai.Module.Admin.Contracts.Http.DocUpdateMenuRequest)">
+            <summary>
+            修改菜单
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.UpdateContentAsync(ZhonTai.Module.Admin.Contracts.Http.DocUpdateContentRequest)">
+            <summary>
+            修改文档内容
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.DeleteAsync(System.Int64)">
+            <summary>
+            彻底删除文档
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.DeleteImageAsync(System.Int64,System.String)">
+            <summary>
+            彻底删除图片
+            </summary>
+            <param name="docId"></param>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.SoftDeleteAsync(System.Int64)">
+            <summary>
+            删除文档
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.GetPlainListAsync">
+            <summary>
+            查询精简文档列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DocService.UploadImage(ZhonTai.Module.Admin.Contracts.Http.DocUploadImageRequest)">
+            <summary>
+            上传文档图片
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.FileService">
+            <summary>
+            文件服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.FileService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.FileGetPageFilter})">
+            <summary>
+            查询分页
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.FileService.DeleteAsync(ZhonTai.Module.Admin.Contracts.Http.FileDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.FileService.UploadFileAsync(Microsoft.AspNetCore.Http.IFormFile,System.String,System.Boolean)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="file">文件</param>
+            <param name="fileDirectory">文件目录</param>
+            <param name="fileReName">文件重命名</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.FileService.UploadFilesAsync(Microsoft.AspNetCore.Http.IFormFileCollection,System.String,System.Boolean)">
+            <summary>
+            上传多文件
+            </summary>
+            <param name="files">文件列表</param>
+            <param name="fileDirectory">文件目录</param>
+            <param name="fileReName">文件重命名</param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.LoginLogService">
+            <summary>
+            登录日志服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.LoginLogService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.LoginLogGetPageFilter})">
+            <summary>
+            查询分页
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.LoginLogService.AddAsync(ZhonTai.Module.Admin.Contracts.Http.LoginLogAddRequest)">
+            <summary>
+            新增
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.OprationLogService">
+            <summary>
+            操作日志服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.OprationLogService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.OprationLogGetPageFilter})">
+            <summary>
+            查询分页
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.OprationLogService.AddAsync(ZhonTai.Module.Admin.Contracts.Http.OprationLogAddRequest)">
+            <summary>
+            新增
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.OrgService">
+            <summary>
+            部门服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.OrgService.GetAsync(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.OrgService.GetListAsync(System.String)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.OrgService.AddAsync(ZhonTai.Module.Admin.Contracts.Http.OrgAddRequest)">
+            <summary>
+            新增
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.OrgService.UpdateAsync(ZhonTai.Module.Admin.Contracts.Http.OrgUpdateRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.OrgService.DeleteAsync(System.Int64)">
+            <summary>
+            彻底删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.OrgService.SoftDeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.PermissionService">
+            <summary>
+            权限服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.ClearUserPermissionsAsync(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            清除权限下关联的用户权限缓存
+            </summary>
+            <param name="permissionIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.GetGroupAsync(System.Int64)">
+            <summary>
+            查询分组
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.GetMenuAsync(System.Int64)">
+            <summary>
+            查询菜单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.GetApiAsync(System.Int64)">
+            <summary>
+            查询接口
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.GetDotAsync(System.Int64)">
+            <summary>
+            查询权限点
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.GetListAsync(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            查询权限列表
+            </summary>
+            <param name="key"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.GetPermissionListAsync">
+            <summary>
+            查询授权权限列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.GetRolePermissionListAsync(System.Int64)">
+            <summary>
+            查询角色权限列表
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.GetTenantPermissionListAsync(System.Int64)">
+            <summary>
+            查询租户权限列表
+            </summary>
+            <param name="tenantId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.AddGroupAsync(ZhonTai.Module.Admin.Contracts.Http.PermissionAddGroupRequest)">
+            <summary>
+            新增分组
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.AddMenuAsync(ZhonTai.Module.Admin.Contracts.Http.PermissionAddMenuRequest)">
+            <summary>
+            新增菜单
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.AddApiAsync(ZhonTai.Module.Admin.Contracts.Http.PermissionAddApiRequest)">
+            <summary>
+            新增接口
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.AddDotAsync(ZhonTai.Module.Admin.Contracts.Http.PermissionAddDotRequest)">
+            <summary>
+            新增权限点
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.UpdateGroupAsync(ZhonTai.Module.Admin.Contracts.Http.PermissionUpdateGroupRequest)">
+            <summary>
+            修改分组
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.UpdateMenuAsync(ZhonTai.Module.Admin.Contracts.Http.PermissionUpdateMenuRequest)">
+            <summary>
+            修改菜单
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.UpdateApiAsync(ZhonTai.Module.Admin.Contracts.Http.PermissionUpdateApiRequest)">
+            <summary>
+            修改接口
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.UpdateDotAsync(ZhonTai.Module.Admin.Contracts.Http.PermissionUpdateDotRequest)">
+            <summary>
+            修改权限点
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.DeleteAsync(System.Int64)">
+            <summary>
+            彻底删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.SoftDeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.AssignAsync(ZhonTai.Module.Admin.Contracts.Http.PermissionAssignRequest)">
+            <summary>
+            保存角色权限
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.PermissionService.SaveTenantPermissionsAsync(ZhonTai.Module.Admin.Contracts.Http.PermissionSaveTenantPermissionsRequest)">
+            <summary>
+            保存租户权限
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService">
+            <summary>
+            套餐服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.ClearUserPermissionsAsync(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            清除租户下所有用户权限缓存
+            </summary>
+            <param name="tenantIds"></param>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.GetAsync(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.GetListAsync(ZhonTai.Module.Admin.Contracts.Http.PkgGetListRequest)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.PkgGetPageFilter})">
+            <summary>
+            查询分页
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.GetPkgTenantListAsync(ZhonTai.Module.Admin.Contracts.Http.PkgGetPkgTenantListRequest)">
+            <summary>
+            查询套餐租户列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.GetPkgTenantPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.PkgGetPkgTenantListRequest})">
+            <summary>
+            查询套餐租户分页
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.GetPkgPermissionListAsync(System.Int64)">
+            <summary>
+            查询套餐权限列表
+            </summary>
+            <param name="pkgId">套餐编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.SetPkgPermissionsAsync(ZhonTai.Module.Admin.Contracts.Http.PkgSetPkgPermissionsRequest)">
+            <summary>
+            设置套餐权限
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.AddPkgTenantAsync(ZhonTai.Module.Admin.Contracts.Http.PkgAddPkgTenantListRequest)">
+            <summary>
+            添加套餐租户
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.RemovePkgTenantAsync(ZhonTai.Module.Admin.Contracts.Http.PkgAddPkgTenantListRequest)">
+            <summary>
+            移除套餐租户
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.AddAsync(ZhonTai.Module.Admin.Contracts.Http.PkgAddRequest)">
+            <summary>
+            新增
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.UpdateAsync(ZhonTai.Module.Admin.Contracts.Http.PkgUpdateRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.DeleteAsync(System.Int64)">
+            <summary>
+            彻底删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.BatchDeleteAsync(System.Int64[])">
+            <summary>
+            批量彻底删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.SoftDeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.BatchSoftDeleteAsync(System.Int64[])">
+            <summary>
+            批量删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService">
+            <summary>
+            角色服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.AddRoleOrgAsync(System.Int64,System.Collections.Generic.List{System.Int64})">
+            <summary>
+            添加角色部门
+            </summary>
+            <param name="roleId"></param>
+            <param name="orgIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.GetAsync(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.GetListAsync(ZhonTai.Module.Admin.Contracts.Http.RoleGetListRequest)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.RoleGetPageFilter})">
+            <summary>
+            查询分页
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.GetRoleUserListAsync(ZhonTai.Module.Admin.Contracts.Http.RoleGetRoleUserListRequest)">
+            <summary>
+            查询角色用户列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.AddRoleUserAsync(ZhonTai.Module.Admin.Contracts.Http.RoleAddRoleUserListRequest)">
+            <summary>
+            添加角色用户
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.RemoveRoleUserAsync(ZhonTai.Module.Admin.Contracts.Http.RoleAddRoleUserListRequest)">
+            <summary>
+            移除角色用户
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.AddAsync(ZhonTai.Module.Admin.Contracts.Http.RoleAddRequest)">
+            <summary>
+            新增
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.UpdateAsync(ZhonTai.Module.Admin.Contracts.Http.RoleUpdateRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.DeleteAsync(System.Int64)">
+            <summary>
+            彻底删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.BatchDeleteAsync(System.Int64[])">
+            <summary>
+            批量彻底删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.SoftDeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.BatchSoftDeleteAsync(System.Int64[])">
+            <summary>
+            批量删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.SetDataScopeAsync(ZhonTai.Module.Admin.Contracts.Http.RoleSetDataScopeRequest)">
+            <summary>
+            设置数据权限
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.SmsService">
+            <summary>
+            短信服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.SmsService.SendCodeAsync(ZhonTai.Module.Admin.Contracts.Http.SmsSendCodeRequest)">
+            <summary>
+            发送短信验证码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.Tenant.TenantService">
+            <summary>
+            租户服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Tenant.TenantService.GetAsync(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Tenant.TenantService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.TenantGetPageFilter})">
+            <summary>
+            查询分页
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Tenant.TenantService.AddAsync(ZhonTai.Module.Admin.Contracts.Http.TenantAddRequest)">
+            <summary>
+            新增
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Tenant.TenantService.UpdateAsync(ZhonTai.Module.Admin.Contracts.Http.TenantUpdateRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Tenant.TenantService.DeleteAsync(System.Int64)">
+            <summary>
+            彻底删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Tenant.TenantService.SoftDeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Tenant.TenantService.BatchSoftDeleteAsync(System.Int64[])">
+            <summary>
+            批量删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Tenant.TenantService.SetEnableAsync(ZhonTai.Module.Admin.Contracts.Http.TenantSetEnableRequest)">
+            <summary>
+            设置启用
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.UserService">
+            <summary>
+            用户服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.GetAsync(System.Int64)">
+            <summary>
+            查询用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.UserGetPageFilter})">
+            <summary>
+            查询分页
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.GetDataPermissionAsync">
+            <summary>
+            获得数据权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.GetBasicAsync">
+            <summary>
+            查询用户基本信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.GetPermissionsAsync">
+            <summary>
+            查询用户权限信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.AddAsync(ZhonTai.Module.Admin.Contracts.Http.UserAddRequest)">
+            <summary>
+            新增用户
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.UpdateAsync(ZhonTai.Module.Admin.Contracts.Http.UserUpdateRequest)">
+            <summary>
+            修改用户
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.AddMemberAsync(ZhonTai.Module.Admin.Contracts.Http.UserAddMemberRequest)">
+            <summary>
+            新增会员
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.UpdateMemberAsync(ZhonTai.Module.Admin.Contracts.Http.UserUpdateMemberRequest)">
+            <summary>
+            修改会员
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.UpdateBasicAsync(ZhonTai.Module.Admin.Contracts.Http.UserUpdateBasicRequest)">
+            <summary>
+            更新用户基本信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.ChangePasswordAsync(ZhonTai.Module.Admin.Contracts.Http.UserChangePasswordRequest)">
+            <summary>
+            修改用户密码
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.ResetPasswordAsync(ZhonTai.Module.Admin.Contracts.Http.UserResetPasswordRequest)">
+            <summary>
+            重置密码
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.SetManagerAsync(ZhonTai.Module.Admin.Contracts.Http.UserSetManagerRequest)">
+            <summary>
+            设置主管
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.SetEnableAsync(ZhonTai.Module.Admin.Contracts.Http.UserSetEnableRequest)">
+            <summary>
+            设置启用
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.DeleteAsync(System.Int64)">
+            <summary>
+            彻底删除用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.BatchDeleteAsync(System.Int64[])">
+            <summary>
+            批量彻底删除用户
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.SoftDeleteAsync(System.Int64)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.BatchSoftDeleteAsync(System.Int64[])">
+            <summary>
+            批量删除用户
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.AvatarUpload(Microsoft.AspNetCore.Http.IFormFile,System.Boolean)">
+            <summary>
+            上传头像
+            </summary>
+            <param name="file"></param>
+            <param name="autoUpdate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.OneClickLoginAsync(System.String)">
+            <summary>
+            一键登录用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Services.ViewService">
+            <summary>
+            视图服务
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ViewService.GetAsync(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ViewService.GetListAsync(System.String)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ViewService.AddAsync(ZhonTai.Module.Admin.Contracts.Http.ViewAddRequest)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ViewService.UpdateAsync(ZhonTai.Module.Admin.Contracts.Http.ViewUpdateRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ViewService.DeleteAsync(System.Int64)">
+            <summary>
+            彻底删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ViewService.BatchDeleteAsync(System.Int64[])">
+            <summary>
+            批量彻底删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ViewService.SoftDeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ViewService.BatchSoftDeleteAsync(System.Int64[])">
+            <summary>
+            批量删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.ViewService.SyncAsync(ZhonTai.Module.Admin.Contracts.Http.ViewSyncRequest)">
+            <summary>
+            同步
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

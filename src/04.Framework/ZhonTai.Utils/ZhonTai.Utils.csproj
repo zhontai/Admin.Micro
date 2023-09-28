@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+	    <Description>中台通用工具库</Description>
+		<PackageTags>Common;Utils;</PackageTags>
+    </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>ZhonTai.Utils.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591;8632</NoWarn>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+	
+  <ItemGroup>
+	<None Include="../../../logo.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+        
+  <ItemGroup>
+	<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.11" />
+	<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+	<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>

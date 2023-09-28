@@ -1,0 +1,29 @@
+# tye application configuration file
+# read all about it at https://github.com/dotnet/tye
+#
+# when you've given us a try, we'd love to know what you think:
+#    https://aka.ms/AA7q20u
+#
+# tye.yaml config
+#   https://github.com/dotnet/tye/blob/main/docs/reference/schema.md
+#
+name: myapp
+dashboardPort: 8000
+services:
+- name: gateway-corp
+  project: src\02.Gateways\ZhonTai.Gateway.Corp\ZhonTai.Gateway.Corp.csproj
+  bindings:
+    - protocol: http
+      port: 10010
+- name: module-admin
+  project: src\03.Modules\Admin\ZhonTai.Module.Admin.WebHost\ZhonTai.Module.Admin.WebHost.csproj
+  bindings:
+    - protocol: http
+      port: 11010
+      routes: [/doc/admin, /doc/admin/swagger]
+- name: module-app
+  project: src\03.Modules\App\ZhonTai.Module.App\src\hosts\ZhonTai.Module.App.Host\ZhonTai.Module.App.Host.csproj
+  bindings:
+    - protocol: http
+      port: 11020
+      routes: [/doc/app, /doc/app/swagger]

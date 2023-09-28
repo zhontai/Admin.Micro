@@ -1,0 +1,104 @@
+/* 主题样式
+------------------------------- */
+/* :root {
+  --vp-c-indigo-1: #5672cd;
+  --vp-c-indigo-2: #3a5ccc;
+  --vp-c-indigo-3: #409eff;
+} */
+
+/* 滚动条美化
+------------------------------- */
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(144, 147, 153, 0.3);
+  background-clip: padding-box;
+  min-height: 28px;
+  border-radius: 5px;
+  transition: 0.3s background-color;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(144, 147, 153, 0.5);
+}
+
+/* 防止图片换行
+------------------------------- */
+img {
+  display: inline-block;
+}
+
+.my-img {
+  display: inline-block;
+  border: 1px solid var(--vp-c-brand);
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 100px;
+}
+.my-img p {
+  margin: 0;
+  line-height: 0;
+}
+
+/* 赞助商图片样式
+------------------------------- */
+.vp-sponsor-grid-item .vp-sponsor-grid-image {
+  filter: unset;
+  max-width: unset !important;
+  max-height: unset !important;
+  width: 100%;
+  height: 100%;
+}
+.admin-sponsors-item img {
+  border-radius: 12px;
+}
+
+/* 表格样式
+------------------------------- */
+.vp-doc table {
+  width: 100%;
+  display: table;
+}
+
+/* 顶部导航样式
+------------------------------- */
+.VPNavBar.has-sidebar .curtain {
+  border-bottom: 1px solid var(--vp-c-divider);
+  bottom: 0px !important;
+  height: 1px !important;
+}
+.VPNavBar.has-sidebar .curtain::before {
+  display: none !important;
+}
+
+/* 文档内容样式
+------------------------------- */
+.VPDoc.has-aside .content-container {
+  max-width: none !important;
+}
+.VPDocAside .content {
+  border-left-width: 2px !important;
+}
+
+/* 导航目录样式
+------------------------------- */
+.VPDocAside .content .outline-marker {
+  left: -2px !important;
+  width: 2px !important;
+}
+@media (min-width: 960px) {
+  .VPDoc .content {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+}
+/* .VPDocAsideOutline .outline-link:hover,
+.VPDocAsideOutline .outline-link.active {
+  color: var(--vp-c-brand) !important;
+} */
+
+img[data-fancybox] {
+  cursor: pointer;
+}

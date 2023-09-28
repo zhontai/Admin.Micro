@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>中台Admin权限管理接口库</Description>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>ZhonTai.Module.Admin.HttpApi.xml</DocumentationFile>
+		<NoWarn>1701;1702;1591;8632</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../../../../logo.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="OnceMi.AspNetCore.OSS" Version="1.2.0" />
+		<PackageReference Include="Lazy.SlideCaptcha.Core" Version="2.0.0" />
+		<PackageReference Include="UAParser" Version="3.1.47" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\04.framework\ZhonTai.Api.Core\ZhonTai.Api.Core.csproj" />
+	  <ProjectReference Include="..\..\..\04.framework\ZhonTai.Api.DynamicApi\ZhonTai.Api.DynamicApi.csproj" />
+	  <ProjectReference Include="..\..\..\04.Framework\ZhonTai.Api.Rpc.EventBus\ZhonTai.Api.Rpc.EventBus.csproj" />
+	  <ProjectReference Include="..\..\..\04.framework\ZhonTai.Utils\ZhonTai.Utils.csproj" />
+	  <ProjectReference Include="..\ZhonTai.Module.Admin.Contracts\ZhonTai.Module.Admin.Contracts.csproj" />
+	</ItemGroup>
+
+</Project>

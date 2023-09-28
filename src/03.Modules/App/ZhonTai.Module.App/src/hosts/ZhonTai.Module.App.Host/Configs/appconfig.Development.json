@@ -1,0 +1,37 @@
+{
+  "ApiConfig": {
+    "AppConfig": {
+      //跨域地址
+      "corUrls": [],
+      //程序集名称
+      "assemblyNames": [ "ZhonTai.Module.App.Api" ],
+      //分布式事务唯一标识admin，为空则不生成分布式事务表
+      "distributeKey": "",
+      //Swagger文档
+      "swagger": {
+        //启用SchemaId命名空间
+        "enableSchemaIdNamespace": false,
+        //程序集列表，用于启用SchemaId命名空间
+        "assemblyNameList": [],
+        //路由前缀
+        "routePrefix": "doc/app/swagger",
+        //地址
+        "url": "http://localhost:11010",
+        "projects": [
+          {
+            "title": "app接口",
+            "code": "app",
+            "description": "app接口"
+          }
+        ]
+      },
+      //ZhonTai接口文档
+      "apiUI": {
+        //启用
+        "enable": true,
+        //路由前缀
+        "routePrefix": "doc/app"
+      }
+    }
+  }
+}

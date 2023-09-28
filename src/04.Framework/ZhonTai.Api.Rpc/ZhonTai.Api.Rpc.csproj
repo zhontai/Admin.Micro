@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>中台接口远程调用核心库</Description>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<NoWarn>1701;1702;1591;8632</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../../../logo.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="FreeSql" Version="3.2.800" />
+		<PackageReference Include="Microsoft.Extensions.Http.Polly" Version="7.0.11" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ZhonTai.Utils\ZhonTai.Utils.csproj" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,38 @@
+{
+  "name": "zhontai-admin-doc",
+  "version": "1.1.0",
+  "description": "权限管理开发文档",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs --port 8800",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install:pkg": "npm install --registry https://registry.npmmirror.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/zhontai/zhontai-admin-doc.git"
+  },
+  "keywords": [
+    "doc",
+    "zhontai-admin",
+    "admin",
+    "zhontai-admin-doc",
+    "vue3",
+    "vuejs/zhontai",
+    "element-plus"
+  ],
+  "author": "xiaoxue",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "markdown-it-custom-attrs": "^1.0.2",
+    "stylus": "^0.60.0",
+    "stylus-loader": "^7.1.3",
+    "@vite-pwa/vitepress": "^0.2.1",
+    "vitepress": "^1.0.0-rc.13",
+    "vite-plugin-vue-setup-extend-plus": "^0.1.0"
+  }
+}

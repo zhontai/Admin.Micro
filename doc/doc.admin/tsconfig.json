@@ -1,0 +1,4 @@
+{
+  "include": ["./*.ts", "./docs/.vitepress/**/*.ts", "./docs/.vitepress/**/*.d.ts", "./docs/.vitepress/**/*.tsx", "./docs/.vitepress/**/*.vue"],
+  "exclude": ["dist", "node_modules"]
+}

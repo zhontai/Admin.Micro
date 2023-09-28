@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>中台缓存库</Description>
+		<PackageTags>Cache;MemoryCache;Redis;</PackageTags>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>ZhonTai.Plugin.Cache.xml</DocumentationFile>
+		<NoWarn>1701;1702;1591;8632</NoWarn>
+		<OutputPath></OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../../../logo.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="FreeRedis" Version="1.1.5" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="7.0.0" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <ProjectReference Include="..\..\04.framework\ZhonTai.Utils\ZhonTai.Utils.csproj" />
+	</ItemGroup>
+</Project>

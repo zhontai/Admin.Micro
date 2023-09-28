@@ -1,0 +1,28 @@
+{
+  "ApiConfig": {
+    "JwtConfig": {
+      //验证签发者
+      "ValidateIssuer": true,
+      //有效签发者
+      "ValidIssuer": "zhontai",
+      //验证受众
+      "ValidateAudience": true,
+      //有效受众
+      "ValidAudience": "admin",
+      //验证签发者签名密钥
+      "ValidateIssuerSigningKey": true,
+      //签发者签名密钥
+      "IssuerSigningKey": "53d89be9328b11ee8c7e8cec4b9877db",
+      //时钟偏差（秒）
+      "ClockSkew": 1,
+      //验证有效期
+      "ValidateLifetime": true,
+      //要求过期时间
+      "RequireExpirationTime": true,
+      //有效期(分钟) 120 = 2小时
+      "Expires": 120,
+      //刷新有效期(分钟) 1440 = 1天
+      "RefreshExpires": 1440
+    }
+  }
+}

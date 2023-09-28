@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>中台接口核心库</Description>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>ZhonTai.Api.Core.xml</DocumentationFile>
+		<NoWarn>1701;1702;1591;8632</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../../../logo.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="7.1.0" />
+		<PackageReference Include="AspNetCoreRateLimit" Version="5.0.0" />
+		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+		<PackageReference Include="Autofac.Extras.DynamicProxy" Version="7.1.0" />
+		<PackageReference Include="Castle.Core.AsyncInterceptor" Version="2.1.0" />
+		<PackageReference Include="DotNetCore.CAP" Version="7.2.1" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+		<PackageReference Include="FreeRedis.DistributedCache" Version="1.0.5" />
+		<PackageReference Include="FreeSql" Version="3.2.800" />
+		<PackageReference Include="FreeSql.Cloud" Version="1.6.6" />
+		<PackageReference Include="FreeSql.Repository" Version="3.2.800" />
+		<PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
+		<PackageReference Include="Mapster" Version="7.3.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyModel" Version="7.0.0" />
+		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.3.8" />
+		<PackageReference Include="NLog" Version="5.2.4" />
+		<PackageReference Include="NLog.Web.AspNetCore" Version="5.3.4" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<PackageReference Include="Yitter.IdGenerator" Version="1.0.14" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\05.plugins\ZhonTai.Plugin.Cache\ZhonTai.Plugin.Cache.csproj" />
+	  <ProjectReference Include="..\ZhonTai.Api.DynamicApi\ZhonTai.Api.DynamicApi.csproj" />
+	  <ProjectReference Include="..\ZhonTai.Api.Rpc.Grpc\ZhonTai.Api.Rpc.Grpc.csproj" />
+	  <ProjectReference Include="..\ZhonTai.Utils\ZhonTai.Utils.csproj" />
+	</ItemGroup>
+</Project>
