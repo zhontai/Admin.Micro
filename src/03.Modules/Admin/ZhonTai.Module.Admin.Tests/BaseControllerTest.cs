@@ -8,7 +8,8 @@ using Newtonsoft.Json.Linq;
 using Xunit;
 using ZhonTai.Api.Core.Configs;
 using ZhonTai.Api.Core.Enums;
-using ZhonTai.Module.Admin.Api.Services.Auth.Dto;
+using ZhonTai.Api.Rpc.Dtos;
+using ZhonTai.Module.Admin.Contracts.Http;
 using ZhonTai.Plugin.Cache;
 
 namespace ZhonTai.Module.Admin.Tests;
@@ -126,27 +127,27 @@ public class BaseControllerTest : BaseTest
         return content.NotNull() ? JsonConvert.DeserializeObject<T>(content) : default;
     }
 
-    public async Task<ResultOutput<dynamic>> GetResult(string apiPath, object input = null, bool checkStatus = true)
+    public async Task<Response<dynamic>> GetResult(string apiPath, object input = null, bool checkStatus = true)
     {
-        return await GetResult<ResultOutput<dynamic>>(apiPath, input, checkStatus);
+        return await GetResult<Response<dynamic>>(apiPath, input, checkStatus);
     }
 
-    public async Task<ResultOutput<dynamic>> PostResult(string apiPath, object input = null, bool checkStatus = true, string contentType = "application/json;charset=UTF-8")
+    public async Task<Response<dynamic>> PostResult(string apiPath, object input = null, bool checkStatus = true, string contentType = "application/json;charset=UTF-8")
     {
-        return await PostResult<ResultOutput<dynamic>>(apiPath, input, checkStatus, contentType);
+        return await PostResult<Response<dynamic>>(apiPath, input, checkStatus, contentType);
     }
 
-    public async Task<ResultOutput<dynamic>> PutResult(string apiPath, object input = null, bool checkStatus = true, string contentType = "application/json;charset=UTF-8")
+    public async Task<Response<dynamic>> PutResult(string apiPath, object input = null, bool checkStatus = true, string contentType = "application/json;charset=UTF-8")
     {
-        return await PutResult<ResultOutput<dynamic>>(apiPath, input, checkStatus, contentType);
+        return await PutResult<Response<dynamic>>(apiPath, input, checkStatus, contentType);
     }
 
-    public async Task<ResultOutput<dynamic>> DeleteResult(string apiPath, object input = null, bool checkStatus = true)
+    public async Task<Response<dynamic>> DeleteResult(string apiPath, object input = null, bool checkStatus = true)
     {
-        return await DeleteResult<ResultOutput<dynamic>>(apiPath, input, checkStatus);
+        return await DeleteResult<Response<dynamic>>(apiPath, input, checkStatus);
     }
 
-    public async Task Login(AuthLoginInput input = null)
+    public async Task Login(AuthLoginRequest input = null)
     {
         var authorization = Client.DefaultRequestHeaders.FirstOrDefault(a => a.Key == "Authorization");
         if (authorization.Key != null)
@@ -156,7 +157,7 @@ public class BaseControllerTest : BaseTest
 
         if (input == null)
         {
-            input = new AuthLoginInput()
+            input = new AuthLoginRequest()
             {
                 UserName = "admin",
                 Password = "111111"

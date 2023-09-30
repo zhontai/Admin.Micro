@@ -1,5 +1,5 @@
 ﻿using Xunit;
-using ZhonTai.Module.Admin.Api.Domain.Api;
+using ZhonTai.Module.Admin.HttpApi.Domain.Api;
 
 namespace ZhonTai.Module.Admin.Tests.Repositories;
 

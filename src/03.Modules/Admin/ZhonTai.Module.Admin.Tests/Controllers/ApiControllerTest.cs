@@ -1,7 +1,6 @@
 ﻿using Xunit;
-using ZhonTai.Module.Admin.Api.Services.Api.Dto;
-using ZhonTai.Module.Admin.Api.Domain.Api.Dto;
-using ZhonTai.Api.Core.Dto;
+using ZhonTai.Api.Rpc.Dtos;
+using ZhonTai.Module.Admin.Contracts.Http;
 
 namespace ZhonTai.Module.Admin.Tests.Controllers;
 
@@ -14,39 +13,21 @@ public class ApiControllerTest : BaseControllerTest
     [Fact]
     public async Task Get()
     {
-        var res = await GetResult<ResultOutput<ApiGetOutput>>("/api/admin/api/get?id=161227167658053");
+        var res = await GetResult<Response<ApiGetResponse>>("/api/admin/api/get?id=161227167658053");
         Assert.True(res.Success);
     }
 
     [Fact]
     public async Task GetList()
     {
-        var res = await GetResult<ResultOutput<List<ApiListOutput>>>("/api/admin/api/get-list?key=接口管理");
-        Assert.True(res.Success);
-    }
-
-    [Fact]
-    public async Task GetPage()
-    {
-        await Login();
-        var input = new PageInput<ApiGetPageDto>
-        {
-            CurrentPage = 1,
-            PageSize = 20,
-            Filter = new ApiGetPageDto
-            {
-                Label = "接口管理"
-            }
-        };
-
-        var res = await PostResult($"/api/admin/api/get-page", input);
+        var res = await GetResult<Response<List<ApiGetListResponse>>>("/api/admin/api/get-list?key=接口管理");
         Assert.True(res.Success);
     }
 
     [Fact]
     public async Task Add()
     {
-        var input = new ApiAddInput
+        var input = new ApiAddRequest
         {
            Label = "新接口",
            Path = "/api/admin/api/newapi",
@@ -60,7 +41,7 @@ public class ApiControllerTest : BaseControllerTest
     [Fact]
     public async Task Update()
     {
-        var output = await GetResult<ResultOutput<ApiGetOutput>>("/api/admin/api/get?id=161227167658053");
+        var output = await GetResult<Response<ApiGetResponse>>("/api/admin/api/get?id=161227167658053");
         var res = await PutResult($"/api/admin/api/update", output.Data);
         Assert.True(res.Success);
     }

@@ -1,5 +1,5 @@
 ﻿using Xunit;
-using ZhonTai.Module.Admin.Api.Services.Api;
+using ZhonTai.Module.Admin.Contracts.Http;
 
 namespace ZhonTai.Module.Admin.Tests.Services;
 
