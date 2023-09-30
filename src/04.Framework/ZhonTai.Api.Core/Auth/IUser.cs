@@ -60,5 +60,5 @@ public interface IUser
     /// <summary>
     /// 数据权限
     /// </summary>
-    DataPermission DataPermission { get; }
+    DataPermissionResponse DataPermission { get; }
 }

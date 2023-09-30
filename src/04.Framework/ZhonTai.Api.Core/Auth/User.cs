@@ -175,7 +175,7 @@ public class User : IUser
     /// 获得数据权限
     /// </summary>
     /// <returns></returns>
-    DataPermission GetDataPermission()
+    DataPermissionResponse GetDataPermission()
     {
         var cache = _accessor?.HttpContext?.RequestServices.GetRequiredService<ICache>();
         if (cache == null)
@@ -184,12 +184,12 @@ public class User : IUser
         }
         else
         {
-            return cache.Get<DataPermission>(CacheKeys.DataPermission + Id);
+            return cache.Get<DataPermissionResponse>(CacheKeys.DataPermission + Id);
         }
     }
 
     /// <summary>
     /// 数据权限
     /// </summary>
-    public virtual DataPermission DataPermission => GetDataPermission();
+    public virtual DataPermissionResponse DataPermission => GetDataPermission();
 }
