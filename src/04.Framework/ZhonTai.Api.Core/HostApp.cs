@@ -56,8 +56,8 @@ using ProtoBuf.Grpc.Server;
 using ZhonTai.Api.Core.GrpcServices;
 using ZhonTai.Api.Rpc.Configs;
 using ZhonTai.Api.Core.IdGenerator;
-using ZhonTai.Api.Rpc.Dtos;
 using ZhonTai.Api.Rpc.Helpers;
+using SkyApm.Utilities.DependencyInjection;
 
 namespace ZhonTai.Api.Core;
 
@@ -246,6 +246,8 @@ public class HostApp
 
         //健康检查
         services.AddHealthChecks();
+
+        services.AddSkyApmExtensions();
         
         //权限处理
         services.AddScoped<IPermissionHandler, PermissionHandler>();

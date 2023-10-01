@@ -101,7 +101,7 @@ public partial class UserService : BaseService, IUserService, IDynamicApi
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpPost]
-    public async Task<PageResponse<UserGetPageResponse>> GetPageAsync(PageRequest<UserGetPageFilter> request)
+    public async Task<PageResponse<UserGetPageResponse>> GetPageAsync(PageRequest<UserGetPageFilterRequest> request)
     {
         var dataPermission = await AppInfo.GetRequiredService<IUserService>().GetDataPermissionAsync();
 

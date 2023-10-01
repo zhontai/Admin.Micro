@@ -1,6 +1,6 @@
 ﻿namespace ZhonTai.Module.Admin.Contracts.Http;
 
-public class LoginLogGetPageFilter
+public class OprationLogGetPageFilterRequest
 {
     /// <summary>
     /// 创建者

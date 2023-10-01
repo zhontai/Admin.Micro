@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using ZhonTai.Utils.Helpers;
-using ZhonTai.Module.Admin.HttpApi.Domain.OprationLog;
 using ZhonTai.Api.DynamicApi;
 using ZhonTai.Api.DynamicApi.Attributes;
 using Microsoft.AspNetCore.Mvc;
@@ -33,7 +32,7 @@ public class OprationLogService : BaseService, IOprationLogService, IDynamicApi
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpPost]
-    public async Task<PageResponse<OprationLogGetPageResponse>> GetPageAsync(PageRequest<OprationLogGetPageFilter> request)
+    public async Task<PageResponse<OprationLogGetPageResponse>> GetPageAsync(PageRequest<OprationLogGetPageFilterRequest> request)
     {
         var userName = request.Filter?.CreatedUserName;
 

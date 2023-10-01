@@ -1,6 +1,6 @@
 ﻿namespace ZhonTai.Module.Admin.Contracts.Http;
 
-public partial class DictTypeGetPageFilter
+public partial class DictTypeGetPageFilterRequest
 {
     /// <summary>
     /// 字典名称

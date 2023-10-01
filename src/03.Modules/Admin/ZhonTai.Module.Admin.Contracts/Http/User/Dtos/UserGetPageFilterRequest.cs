@@ -3,7 +3,7 @@
 /// <summary>
 /// 用户分页查询条件
 /// </summary>
-public class UserGetPageFilter
+public class UserGetPageFilterRequest
 {
     /// <summary>
     /// 部门Id

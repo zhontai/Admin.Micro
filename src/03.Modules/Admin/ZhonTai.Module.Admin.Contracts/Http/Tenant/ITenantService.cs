@@ -7,7 +7,7 @@ public interface ITenantService
 {
     Task<TenantGetResponse> GetAsync(long id);
 
-    Task<PageResponse<TenantGetPageResponse>> GetPageAsync(PageRequest<TenantGetPageFilter> request);
+    Task<PageResponse<TenantGetPageResponse>> GetPageAsync(PageRequest<TenantGetPageFilterRequest> request);
 
     Task<long> AddAsync(TenantAddRequest request);
 

@@ -5,7 +5,7 @@
 /// </summary>
 public interface ILoginLogService
 {
-    Task<PageResponse<LoginLogGetPageResponse>> GetPageAsync(PageRequest<LoginLogGetPageFilter> input);
+    Task<PageResponse<LoginLogGetPageResponse>> GetPageAsync(PageRequest<LoginLogGetPageFilterRequest> input);
 
     Task<long> AddAsync(LoginLogAddRequest input);
 }

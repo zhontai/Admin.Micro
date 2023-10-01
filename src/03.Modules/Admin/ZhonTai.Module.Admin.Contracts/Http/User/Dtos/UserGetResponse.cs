@@ -5,12 +5,12 @@ public class UserGetResponse : UserUpdateRequest
     /// <summary>
     /// 角色列表
     /// </summary>
-    public ICollection<UserGetRoleFilter> Roles { get; set; }
+    public ICollection<UserGetRoleFilterRequest> Roles { get; set; }
 
     /// <summary>
     /// 部门列表
     /// </summary>
-    public ICollection<UserGetOrgFilter> Orgs { get; set; }
+    public ICollection<UserGetOrgFilterRequest> Orgs { get; set; }
 
     /// <summary>
     /// 所属部门Ids

@@ -81,7 +81,7 @@ public class TenantService : BaseService, ITenantService, IDynamicApi
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpPost]
-    public async Task<PageResponse<TenantGetPageResponse>> GetPageAsync(PageRequest<TenantGetPageFilter> request)
+    public async Task<PageResponse<TenantGetPageResponse>> GetPageAsync(PageRequest<TenantGetPageFilterRequest> request)
     {
         using var _ = _tenantRepository.DataFilter.Disable(FilterNames.Tenant);
 

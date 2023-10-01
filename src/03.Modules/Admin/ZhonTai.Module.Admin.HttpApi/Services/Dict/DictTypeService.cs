@@ -40,7 +40,7 @@ public class DictTypeService : BaseService, IDictTypeService, IDynamicApi
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpPost]
-    public async Task<PageResponse<DictTypeGetPageResponse>> GetPageAsync(PageRequest<DictTypeGetPageFilter> request)
+    public async Task<PageResponse<DictTypeGetPageResponse>> GetPageAsync(PageRequest<DictTypeGetPageFilterRequest> request)
     {
         var key = request.Filter?.Name;
 

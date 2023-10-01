@@ -205,7 +205,7 @@ public class ApiService : BaseService, IApiService, IDynamicApi
             string desc;
             for (int i = 0, len = parentApis.Count; i < len; i++)
             {
-                ApiSyncDto api = parentApis[i];
+                ApiSyncdRequest.Models.Api api = parentApis[i];
                 a = apis.Find(a => a.Path == api.Path);
                 if (a?.Id > 0)
                 {
@@ -231,7 +231,7 @@ public class ApiService : BaseService, IApiService, IDynamicApi
             string desc;
             for (int i = 0, len = childApis.Count; i < len; i++)
             {
-                ApiSyncDto api = childApis[i];
+                ApiSyncdRequest.Models.Api api = childApis[i];
                 a = apis.Find(a => a.Path == api.Path);
                 pa = apis.Find(a => a.Path == api.ParentPath);
                 if (a?.Id > 0)

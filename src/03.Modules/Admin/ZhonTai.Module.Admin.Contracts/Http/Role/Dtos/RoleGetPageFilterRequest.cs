@@ -1,6 +1,6 @@
 ﻿namespace ZhonTai.Module.Admin.Contracts.Http;
 
-public partial class PkgGetPageFilter
+public partial class RoleGetPageFilterRequest
 {
     /// <summary>
     /// 名称

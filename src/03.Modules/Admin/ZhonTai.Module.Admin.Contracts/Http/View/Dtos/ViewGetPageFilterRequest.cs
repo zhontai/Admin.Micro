@@ -1,6 +1,6 @@
 ﻿namespace ZhonTai.Module.Admin.Contracts.Http;
 
-public class ViewGetPageFilter
+public class ViewGetPageFilterRequest
 {
     /// <summary>
     /// 视图名称

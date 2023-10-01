@@ -118,19 +118,17 @@ public class AuthService : BaseService, IAuthService, IDynamicApi
     /// </summary>
     /// <returns></returns>
     [Login]
-    public async Task<AuthUserProfileDto> GetUserProfileAsync()
+    public async Task<AuthGetUserProfileResponse> GetUserProfileAsync()
     {
         if (!(User?.Id > 0))
         {
             throw Response.Exception("未登录");
         }
 
-        using (_userRepository.DataFilter.Disable(FilterNames.Self, FilterNames.Data))
-        {
-            var profile = await _userRepository.GetAsync<AuthUserProfileDto>(User.Id);
+        using var _ = _userRepository.DataFilter.Disable(FilterNames.Self, FilterNames.Data);
 
-            return profile;
-        }
+        var profile = await _userRepository.GetAsync<AuthGetUserProfileResponse>(User.Id);
+        return profile;
     }
    
     /// <summary>
@@ -138,7 +136,7 @@ public class AuthService : BaseService, IAuthService, IDynamicApi
     /// </summary>
     /// <returns></returns>
     [Login]
-    public async Task<List<AuthUserMenuDto>> GetUserMenusAsync()
+    public async Task<List<AuthGetUserMenusResponse>> GetUserMenusAsync()
     {
         if (!(User?.Id > 0))
         {
@@ -179,7 +177,7 @@ public class AuthService : BaseService, IAuthService, IDynamicApi
 
             var menuList = await menuSelect
                 .Where(a => new[] { PermissionType.Group, PermissionType.Menu }.Contains(a.Type))
-                .ToListAsync(a => new AuthUserMenuDto { ViewPath = a.View.Path });
+                .ToListAsync(a => new AuthGetUserMenusResponse { ViewPath = a.View.Path });
 
             return menuList.DistinctBy(a => a.Id).OrderBy(a => a.ParentId).ThenBy(a => a.Sort).ToList();
 
@@ -198,47 +196,45 @@ public class AuthService : BaseService, IAuthService, IDynamicApi
             throw Response.Exception("未登录");
         }
 
-        using (_userRepository.DataFilter.Disable(FilterNames.Self, FilterNames.Data))
+        using var _ = _userRepository.DataFilter.Disable(FilterNames.Self, FilterNames.Data);
+        var authGetUserPermissionsResponse = new AuthGetUserPermissionsResponse
         {
-            var authGetUserPermissionsResponse = new AuthGetUserPermissionsResponse
-            {
-                //用户信息
-                User = await _userRepository.GetAsync<AuthUserProfileDto>(User.Id)
-            };
+            //用户信息
+            User = await _userRepository.GetAsync<AuthGetUserProfileResponse>(User.Id)
+        };
 
-            var dotSelect = _permissionRepository.Select.Where(a => a.Type == PermissionType.Dot);
+        var dotSelect = _permissionRepository.Select.Where(a => a.Type == PermissionType.Dot);
 
-            if (!User.PlatformAdmin)
+        if (!User.PlatformAdmin)
+        {
+            var db = _permissionRepository.Orm;
+            if (User.TenantAdmin)
             {
-                var db = _permissionRepository.Orm;
-                if (User.TenantAdmin)
-                {
-                    dotSelect = dotSelect.Where(a =>
-                       db.Select<TenantPermissionEntity>()
-                       .Where(b => b.PermissionId == a.Id && b.TenantId == User.TenantId)
-                       .Any()
-                       ||
-                       db.Select<TenantPkgEntity, PkgPermissionEntity>()
-                       .Where((b, c) => b.PkgId == c.PkgId && b.TenantId == User.TenantId && c.PermissionId == a.Id)
-                       .Any()
-                    );
-                }
-                else
-                {
-                    dotSelect = dotSelect.Where(a =>
-                        db.Select<RolePermissionEntity>()
-                        .InnerJoin<UserRoleEntity>((b, c) => b.RoleId == c.RoleId && c.UserId == User.Id)
-                        .Where(b => b.PermissionId == a.Id)
-                        .Any()
-                    );
-                }
+                dotSelect = dotSelect.Where(a =>
+                   db.Select<TenantPermissionEntity>()
+                   .Where(b => b.PermissionId == a.Id && b.TenantId == User.TenantId)
+                   .Any()
+                   ||
+                   db.Select<TenantPkgEntity, PkgPermissionEntity>()
+                   .Where((b, c) => b.PkgId == c.PkgId && b.TenantId == User.TenantId && c.PermissionId == a.Id)
+                   .Any()
+                );
             }
-
-            //用户权限点
-            authGetUserPermissionsResponse.Permissions = await dotSelect.ToListAsync(a => a.Code);
-
-            return authGetUserPermissionsResponse;
+            else
+            {
+                dotSelect = dotSelect.Where(a =>
+                    db.Select<RolePermissionEntity>()
+                    .InnerJoin<UserRoleEntity>((b, c) => b.RoleId == c.RoleId && c.UserId == User.Id)
+                    .Where(b => b.PermissionId == a.Id)
+                    .Any()
+                );
+            }
         }
+
+        //用户权限点
+        authGetUserPermissionsResponse.Permissions = await dotSelect.ToListAsync(a => a.Code);
+
+        return authGetUserPermissionsResponse;
     }
 
     /// <summary>
@@ -258,7 +254,7 @@ public class AuthService : BaseService, IAuthService, IDynamicApi
             var authGetUserInfoResponse = new AuthGetUserInfoResponse
             {
                 //用户信息
-                User = await _userRepository.GetAsync<AuthUserProfileDto>(User.Id)
+                User = await _userRepository.GetAsync<AuthGetUserProfileResponse>(User.Id)
             };
 
             var menuSelect = _permissionRepository.Select;
@@ -311,7 +307,7 @@ public class AuthService : BaseService, IAuthService, IDynamicApi
 
             var menuList = await menuSelect
                 .Where(a => new[] { PermissionType.Group, PermissionType.Menu }.Contains(a.Type))
-                .ToListAsync(a => new AuthUserMenuDto { ViewPath = a.View.Path });
+                .ToListAsync(a => new AuthGetUserMenusResponse { ViewPath = a.View.Path });
 
             //用户菜单
             authGetUserInfoResponse.Menus = menuList.DistinctBy(a => a.Id).OrderBy(a => a.ParentId).ThenBy(a => a.Sort).ToList();

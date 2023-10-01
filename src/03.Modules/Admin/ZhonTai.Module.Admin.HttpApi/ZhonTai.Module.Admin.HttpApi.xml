@@ -422,16 +422,6 @@
             启用
             </summary>
         </member>
-        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.AppLog.AppLogEntity">
-            <summary>
-            应用程序日志
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.AppLog.AppLogEntity.Id">
-            <summary>
-            主键Id
-            </summary>
-        </member>
         <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.DictType.DictTypeEntity">
             <summary>
             数据字典类型
@@ -637,9 +627,14 @@
             md5码，防止上传重复文件
             </summary>
         </member>
-        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.LoginLog.LoginLogEntity">
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.AppLogEntity">
             <summary>
-            登录日志
+            应用程序日志
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.AppLogEntity.Id">
+            <summary>
+            主键Id
             </summary>
         </member>
         <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.LogAbstract">
@@ -702,27 +697,32 @@
             操作结果
             </summary>
         </member>
-        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.OprationLog.OprationLogEntity">
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.LoginLogEntity">
+            <summary>
+            登录日志
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.HttpApi.Domain.OprationLogEntity">
             <summary>
             操作日志
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.OprationLog.OprationLogEntity.ApiLabel">
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.OprationLogEntity.ApiLabel">
             <summary>
             接口名称
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.OprationLog.OprationLogEntity.ApiPath">
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.OprationLogEntity.ApiPath">
             <summary>
             接口地址
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.OprationLog.OprationLogEntity.ApiMethod">
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.OprationLogEntity.ApiMethod">
             <summary>
             接口提交方法
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.OprationLog.OprationLogEntity.Params">
+        <member name="P:ZhonTai.Module.Admin.HttpApi.Domain.OprationLogEntity.Params">
             <summary>
             操作参数
             </summary>
@@ -1683,7 +1683,7 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.DictGetPageFilter})">
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.DictGetPageFilterRequest})">
             <summary>
             查询分页
             </summary>
@@ -1758,7 +1758,7 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictTypeService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.DictTypeGetPageFilter})">
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.DictTypeService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.DictTypeGetPageFilterRequest})">
             <summary>
             查询分页
             </summary>
@@ -1931,7 +1931,7 @@
             文件服务
             </summary>
         </member>
-        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.FileService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.FileGetPageFilter})">
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.FileService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.FileGetPageFilterRequest})">
             <summary>
             查询分页
             </summary>
@@ -1968,7 +1968,7 @@
             登录日志服务
             </summary>
         </member>
-        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.LoginLogService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.LoginLogGetPageFilter})">
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.LoginLogService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.LoginLogGetPageFilterRequest})">
             <summary>
             查询分页
             </summary>
@@ -1987,7 +1987,7 @@
             操作日志服务
             </summary>
         </member>
-        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.OprationLogService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.OprationLogGetPageFilter})">
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.OprationLogService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.OprationLogGetPageFilterRequest})">
             <summary>
             查询分页
             </summary>
@@ -2226,7 +2226,7 @@
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.PkgGetPageFilter})">
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Pkg.PkgService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.PkgGetPageFilterRequest})">
             <summary>
             查询分页
             </summary>
@@ -2344,7 +2344,7 @@
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.RoleGetPageFilter})">
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Role.RoleService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.RoleGetPageFilterRequest})">
             <summary>
             查询分页
             </summary>
@@ -2445,7 +2445,7 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Tenant.TenantService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.TenantGetPageFilter})">
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.Tenant.TenantService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.TenantGetPageFilterRequest})">
             <summary>
             查询分页
             </summary>
@@ -2506,7 +2506,7 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.UserGetPageFilter})">
+        <member name="M:ZhonTai.Module.Admin.HttpApi.Services.UserService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.UserGetPageFilterRequest})">
             <summary>
             查询分页
             </summary>

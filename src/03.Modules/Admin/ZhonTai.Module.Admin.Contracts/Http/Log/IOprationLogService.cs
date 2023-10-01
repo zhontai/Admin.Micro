@@ -5,7 +5,7 @@
 /// </summary>
 public interface IOprationLogService
 {
-    Task<PageResponse<OprationLogGetPageResponse>> GetPageAsync(PageRequest<OprationLogGetPageFilter> input);
+    Task<PageResponse<OprationLogGetPageResponse>> GetPageAsync(PageRequest<OprationLogGetPageFilterRequest> input);
 
     Task<long> AddAsync(OprationLogAddRequest input);
 }

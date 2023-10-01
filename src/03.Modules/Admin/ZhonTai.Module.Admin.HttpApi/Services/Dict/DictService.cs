@@ -38,7 +38,7 @@ public class DictService : BaseService, IDictService, IDynamicApi
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpPost]
-    public async Task<PageResponse<DictGetPageResponse>> GetPageAsync(PageRequest<DictGetPageFilter> request)
+    public async Task<PageResponse<DictGetPageResponse>> GetPageAsync(PageRequest<DictGetPageFilterRequest> request)
     {
         var key = request.Filter?.Name;
         var dictTypeId = request.Filter?.DictTypeId;

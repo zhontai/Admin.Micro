@@ -5,7 +5,7 @@ public class AuthGetUserPermissionsResponse
     /// <summary>
     /// 用户个人信息
     /// </summary>
-    public AuthUserProfileDto User { get; set; }
+    public AuthGetUserProfileResponse User { get; set; }
 
     /// <summary>
     /// 用户权限列表

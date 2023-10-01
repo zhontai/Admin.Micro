@@ -13,7 +13,7 @@ namespace ZhonTai.Module.Admin.Contracts.Http;
 public interface IUserClientService: IHttpClientService
 {
     [Post("/api/admin/user/get-page")]
-    Task<PageResponse<UserGetPageResponse>> GetPageAsync(PageRequest<UserGetPageFilter> input);
+    Task<PageResponse<UserGetPageResponse>> GetPageAsync(PageRequest<UserGetPageFilterRequest> input);
 }
 
 /// <summary>

@@ -37,7 +37,7 @@ public class FileService : BaseService, IFileService, IDynamicApi
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpPost]
-    public async Task<PageResponse<FileGetPageResponse>> GetPageAsync(PageRequest<FileGetPageFilter> request)
+    public async Task<PageResponse<FileGetPageResponse>> GetPageAsync(PageRequest<FileGetPageFilterRequest> request)
     {
         var fileName = request.Filter?.FileName;
 

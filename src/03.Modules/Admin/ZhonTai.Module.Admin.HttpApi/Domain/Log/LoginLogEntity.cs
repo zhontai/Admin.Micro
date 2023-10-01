@@ -1,6 +1,6 @@
 ﻿using FreeSql.DataAnnotations;
 
-namespace ZhonTai.Module.Admin.HttpApi.Domain.LoginLog;
+namespace ZhonTai.Module.Admin.HttpApi.Domain;
 
 /// <summary>
 /// 登录日志

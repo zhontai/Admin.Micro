@@ -88,7 +88,7 @@ public class RoleService : BaseService, IRoleService, IDynamicApi
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpPost]
-    public async Task<PageResponse<RoleGetPageResponse>> GetPageAsync(PageRequest<RoleGetPageFilter> request)
+    public async Task<PageResponse<RoleGetPageResponse>> GetPageAsync(PageRequest<RoleGetPageFilterRequest> request)
     {
         var key = request.Filter?.Name;
 

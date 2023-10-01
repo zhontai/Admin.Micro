@@ -1,6 +1,6 @@
 ﻿namespace ZhonTai.Module.Admin.Contracts.Http;
 
-public partial class FileGetPageFilter
+public partial class FileGetPageFilterRequest
 {
     /// <summary>
     /// 文件名

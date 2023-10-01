@@ -5,12 +5,12 @@ public class AuthGetUserInfoResponse
     /// <summary>
     /// 用户个人信息
     /// </summary>
-    public AuthUserProfileDto User { get; set; }
+    public AuthGetUserProfileResponse User { get; set; }
 
     /// <summary>
     /// 用户菜单列表
     /// </summary>
-    public List<AuthUserMenuDto> Menus { get; set; }
+    public List<AuthGetUserMenusResponse> Menus { get; set; }
 
     /// <summary>
     /// 用户权限列表

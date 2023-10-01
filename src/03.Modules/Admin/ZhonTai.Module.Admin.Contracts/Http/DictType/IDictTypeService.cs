@@ -7,7 +7,7 @@ public partial interface IDictTypeService
 {
     Task<DictTypeGetResponse> GetAsync(long id);
 
-    Task<PageResponse<DictTypeGetPageResponse>> GetPageAsync(PageRequest<DictTypeGetPageFilter> request);
+    Task<PageResponse<DictTypeGetPageResponse>> GetPageAsync(PageRequest<DictTypeGetPageFilterRequest> request);
 
     Task<long> AddAsync(DictTypeAddRequest request);
 

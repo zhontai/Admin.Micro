@@ -1,9 +1,7 @@
 ﻿namespace ZhonTai.Module.Admin.Contracts.Http;
 
-public class TenantGetPageFilter
+public class UserGetOrgFilterRequest
 {
-    /// <summary>
-    /// 企业名称
-    /// </summary>
+    public long Id { get; set; }
     public string Name { get; set; }
 }

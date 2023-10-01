@@ -82,7 +82,7 @@ public class PkgService : BaseService, IDynamicApi
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpPost]
-    public async Task<PageResponse<PkgGetPageResponse>> GetPageAsync(PageRequest<PkgGetPageFilter> request)
+    public async Task<PageResponse<PkgGetPageResponse>> GetPageAsync(PageRequest<PkgGetPageFilterRequest> request)
     {
         var key = request.Filter?.Name;
 

@@ -8,7 +8,7 @@ namespace ZhonTai.Module.Admin.Contracts.Http;
 /// </summary>
 public interface IFileService
 {
-    Task<PageResponse<FileGetPageResponse>> GetPageAsync(PageRequest<FileGetPageFilter> request);
+    Task<PageResponse<FileGetPageResponse>> GetPageAsync(PageRequest<FileGetPageFilterRequest> request);
 
     Task DeleteAsync(FileDeleteRequest request);
 

@@ -40,7 +40,7 @@ namespace ZhonTai.Module.App.Api.Services.Module
 
             //Http测试
             var res = await AppInfo.GetRequiredService<IUserClientService>().GetPageAsync(
-                new PageRequest<UserGetPageFilter>
+                new PageRequest<UserGetPageFilterRequest>
                 {
                     CurrentPage = 1,
                     PageSize = 20

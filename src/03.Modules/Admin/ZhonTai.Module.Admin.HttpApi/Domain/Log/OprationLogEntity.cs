@@ -1,6 +1,6 @@
 ﻿using FreeSql.DataAnnotations;
 
-namespace ZhonTai.Module.Admin.HttpApi.Domain.OprationLog;
+namespace ZhonTai.Module.Admin.HttpApi.Domain;
 
 /// <summary>
 /// 操作日志

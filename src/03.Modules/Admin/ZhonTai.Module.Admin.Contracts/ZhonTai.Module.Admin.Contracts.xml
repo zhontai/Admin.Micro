@@ -104,34 +104,34 @@
             启用
             </summary>
         </member>
-        <member name="T:ZhonTai.Module.Admin.Contracts.Http.ApiSyncDto">
+        <member name="T:ZhonTai.Module.Admin.Contracts.Http.ApiSyncdRequest">
             <summary>
-            接口同步Dto
+            接口同步
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.ApiSyncDto.Label">
+        <member name="T:ZhonTai.Module.Admin.Contracts.Http.ApiSyncdRequest.Models.Api">
+            <summary>
+            接口
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.ApiSyncdRequest.Models.Api.Label">
             <summary>
             接口名称
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.ApiSyncDto.Path">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.ApiSyncdRequest.Models.Api.Path">
             <summary>
             接口地址
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.ApiSyncDto.ParentPath">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.ApiSyncdRequest.Models.Api.ParentPath">
             <summary>
             父级路径
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.ApiSyncDto.HttpMethods">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.ApiSyncdRequest.Models.Api.HttpMethods">
             <summary>
             接口提交方法
-            </summary>
-        </member>
-        <member name="T:ZhonTai.Module.Admin.Contracts.Http.ApiSyncdRequest">
-            <summary>
-            接口同步
             </summary>
         </member>
         <member name="T:ZhonTai.Module.Admin.Contracts.Http.ApiUpdatedRequest">
@@ -234,6 +234,91 @@
             用户权限列表
             </summary>
         </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.Id">
+            <summary>
+            权限Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.ParentId">
+            <summary>
+            父级节点
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.Path">
+            <summary>
+            路由地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.Name">
+            <summary>
+            路由命名
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.ViewPath">
+            <summary>
+            视图地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.Redirect">
+            <summary>
+            重定向地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.Label">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.Opened">
+            <summary>
+            打开
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.Hidden">
+            <summary>
+            隐藏
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.NewWindow">
+            <summary>
+            打开新窗口
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.External">
+            <summary>
+            链接外显
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.IsKeepAlive">
+            <summary>
+            是否缓存
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.IsAffix">
+            <summary>
+            是否固定
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.Link">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.IsIframe">
+            <summary>
+            是否内嵌窗口
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserMenusResponse.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
         <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserPermissionsResponse.User">
             <summary>
             用户个人信息
@@ -242,6 +327,31 @@
         <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserPermissionsResponse.Permissions">
             <summary>
             用户权限列表
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserProfileResponse">
+            <summary>
+            用户个人信息
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserProfileResponse.UserName">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserProfileResponse.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserProfileResponse.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetUserProfileResponse.Avatar">
+            <summary>
+            头像
             </summary>
         </member>
         <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthGetVerifyCodeResponse.Key">
@@ -304,116 +414,6 @@
             验证码Id
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.Id">
-            <summary>
-            权限Id
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.ParentId">
-            <summary>
-            父级节点
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.Path">
-            <summary>
-            路由地址
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.Name">
-            <summary>
-            路由命名
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.ViewPath">
-            <summary>
-            视图地址
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.Redirect">
-            <summary>
-            重定向地址
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.Label">
-            <summary>
-            权限名称
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.Icon">
-            <summary>
-            图标
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.Opened">
-            <summary>
-            打开
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.Hidden">
-            <summary>
-            隐藏
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.NewWindow">
-            <summary>
-            打开新窗口
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.External">
-            <summary>
-            链接外显
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.IsKeepAlive">
-            <summary>
-            是否缓存
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.IsAffix">
-            <summary>
-            是否固定
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.Link">
-            <summary>
-            链接地址
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.IsIframe">
-            <summary>
-            是否内嵌窗口
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserMenuDto.Sort">
-            <summary>
-            排序
-            </summary>
-        </member>
-        <member name="T:ZhonTai.Module.Admin.Contracts.Http.AuthUserProfileDto">
-            <summary>
-            用户个人信息
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserProfileDto.UserName">
-            <summary>
-            账号
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserProfileDto.Name">
-            <summary>
-            姓名
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserProfileDto.NickName">
-            <summary>
-            昵称
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.AuthUserProfileDto.Avatar">
-            <summary>
-            头像
-            </summary>
-        </member>
         <member name="T:ZhonTai.Module.Admin.Contracts.Http.IAuthService">
             <summary>
             认证授权接口
@@ -467,7 +467,7 @@
             排序
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.DictTypeGetPageFilter.Name">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.DictTypeGetPageFilterRequest.Name">
             <summary>
             字典名称
             </summary>
@@ -582,12 +582,12 @@
             字典值
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.DictGetPageFilter.DictTypeId">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.DictGetPageFilterRequest.DictTypeId">
             <summary>
             字典类型Id
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.DictGetPageFilter.Name">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.DictGetPageFilterRequest.Name">
             <summary>
             字典名称
             </summary>
@@ -812,7 +812,7 @@
             文件Id
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.FileGetPageFilter.FileName">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.FileGetPageFilterRequest.FileName">
             <summary>
             文件名
             </summary>
@@ -1007,7 +1007,7 @@
             创建者
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.LoginLogGetPageFilter.CreatedUserName">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.LoginLogGetPageFilterRequest.CreatedUserName">
             <summary>
             创建者
             </summary>
@@ -1147,7 +1147,7 @@
             操作结果
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.OprationLogGetPageFilter.CreatedUserName">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.OprationLogGetPageFilterRequest.CreatedUserName">
             <summary>
             创建者
             </summary>
@@ -1762,7 +1762,7 @@
             创建时间
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.PkgGetPageFilter.Name">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.PkgGetPageFilterRequest.Name">
             <summary>
             名称
             </summary>
@@ -1937,7 +1937,7 @@
             描述
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.RoleGetPageFilter.Name">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.RoleGetPageFilterRequest.Name">
             <summary>
             名称
             </summary>
@@ -2132,7 +2132,7 @@
             说明
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.TenantGetPageFilter.Name">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.TenantGetPageFilterRequest.Name">
             <summary>
             企业名称
             </summary>
@@ -2220,41 +2220,6 @@
         <member name="T:ZhonTai.Module.Admin.Contracts.Http.ITenantService">
             <summary>
             租户接口
-            </summary>
-        </member>
-        <member name="T:ZhonTai.Module.Admin.Contracts.Http.UserStaffAddRequest">
-            <summary>
-            添加
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserStaffAddRequest.Position">
-            <summary>
-            职位
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserStaffAddRequest.JobNumber">
-            <summary>
-            工号
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserStaffAddRequest.Sex">
-            <summary>
-            性别
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserStaffAddRequest.EntryTime">
-            <summary>
-            入职时间
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserStaffAddRequest.WorkWeChatCard">
-            <summary>
-            企业微信名片
-            </summary>
-        </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserStaffAddRequest.Introduce">
-            <summary>
-            个人简介
             </summary>
         </member>
         <member name="T:ZhonTai.Module.Admin.Contracts.Http.Sex">
@@ -2387,6 +2352,41 @@
             员工
             </summary>
         </member>
+        <member name="T:ZhonTai.Module.Admin.Contracts.Http.UserFormRequest.Models.Staff">
+            <summary>
+            添加
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserFormRequest.Models.Staff.Position">
+            <summary>
+            职位
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserFormRequest.Models.Staff.JobNumber">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserFormRequest.Models.Staff.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserFormRequest.Models.Staff.EntryTime">
+            <summary>
+            入职时间
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserFormRequest.Models.Staff.WorkWeChatCard">
+            <summary>
+            企业微信名片
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserFormRequest.Models.Staff.Introduce">
+            <summary>
+            个人简介
+            </summary>
+        </member>
         <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserGetBasicResponse.Avatar">
             <summary>
             头像
@@ -2412,12 +2412,12 @@
             邮箱
             </summary>
         </member>
-        <member name="T:ZhonTai.Module.Admin.Contracts.Http.UserGetPageFilter">
+        <member name="T:ZhonTai.Module.Admin.Contracts.Http.UserGetPageFilterRequest">
             <summary>
             用户分页查询条件
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserGetPageFilter.OrgId">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.UserGetPageFilterRequest.OrgId">
             <summary>
             部门Id
             </summary>
@@ -2737,7 +2737,7 @@
             说明
             </summary>
         </member>
-        <member name="P:ZhonTai.Module.Admin.Contracts.Http.ViewGetPageFilter.Label">
+        <member name="P:ZhonTai.Module.Admin.Contracts.Http.ViewGetPageFilterRequest.Label">
             <summary>
             视图名称
             </summary>
@@ -2794,10 +2794,10 @@
         <member name="M:Refit.Implementation.Generated.ZhonTaiModuleAdminContractsHttpIUserClientService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:Refit.Implementation.Generated.ZhonTaiModuleAdminContractsHttpIUserClientService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.UserGetPageFilter})">
+        <member name="M:Refit.Implementation.Generated.ZhonTaiModuleAdminContractsHttpIUserClientService.GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.UserGetPageFilterRequest})">
             <inheritdoc />
         </member>
-        <member name="M:Refit.Implementation.Generated.ZhonTaiModuleAdminContractsHttpIUserClientService.ZhonTai#Module#Admin#Contracts#Http#IUserClientService#GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.UserGetPageFilter})">
+        <member name="M:Refit.Implementation.Generated.ZhonTaiModuleAdminContractsHttpIUserClientService.ZhonTai#Module#Admin#Contracts#Http#IUserClientService#GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.UserGetPageFilterRequest})">
             <inheritdoc />
         </member>
         <member name="T:Refit.Implementation.Generated.ZhonTaiModuleAdminContractsHttpIUserService">
@@ -2809,7 +2809,7 @@
         <member name="M:Refit.Implementation.Generated.ZhonTaiModuleAdminContractsHttpIUserService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:Refit.Implementation.Generated.ZhonTaiModuleAdminContractsHttpIUserService.ZhonTai#Module#Admin#Contracts#Http#IUserClientService#GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.UserGetPageFilter})">
+        <member name="M:Refit.Implementation.Generated.ZhonTaiModuleAdminContractsHttpIUserService.ZhonTai#Module#Admin#Contracts#Http#IUserClientService#GetPageAsync(ZhonTai.Api.Rpc.Dtos.PageRequest{ZhonTai.Module.Admin.Contracts.Http.UserGetPageFilterRequest})">
             <inheritdoc />
         </member>
         <member name="M:Refit.Implementation.Generated.ZhonTaiModuleAdminContractsHttpIUserService.ZhonTai#Module#Admin#Contracts#Http#IUserService#GetAsync(System.Int64)">

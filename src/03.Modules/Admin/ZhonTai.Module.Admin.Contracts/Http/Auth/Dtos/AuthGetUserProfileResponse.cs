@@ -3,7 +3,7 @@
 /// <summary>
 /// 用户个人信息
 /// </summary>
-public class AuthUserProfileDto
+public class AuthGetUserProfileResponse
 {
     /// <summary>
     /// 账号

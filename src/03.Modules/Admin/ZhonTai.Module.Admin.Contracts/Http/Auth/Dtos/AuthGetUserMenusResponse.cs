@@ -2,7 +2,7 @@
 
 namespace ZhonTai.Module.Admin.Contracts.Http;
 
-public class AuthUserMenuDto
+public class AuthGetUserMenusResponse
 {
     /// <summary>
     /// 权限Id

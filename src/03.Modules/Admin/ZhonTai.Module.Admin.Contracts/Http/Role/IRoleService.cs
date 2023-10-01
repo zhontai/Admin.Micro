@@ -9,7 +9,7 @@ public interface IRoleService
 
     Task<List<RoleGetListResponse>> GetListAsync(RoleGetListRequest input);
 
-    Task<PageResponse<RoleGetPageResponse>> GetPageAsync(PageRequest<RoleGetPageFilter> input);
+    Task<PageResponse<RoleGetPageResponse>> GetPageAsync(PageRequest<RoleGetPageFilterRequest> input);
 
     Task<long> AddAsync(RoleAddRequest input);
 

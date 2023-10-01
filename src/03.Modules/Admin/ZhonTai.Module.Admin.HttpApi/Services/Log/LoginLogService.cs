@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using ZhonTai.Utils.Helpers;
-using ZhonTai.Module.Admin.HttpApi.Domain.LoginLog;
 using ZhonTai.Api.DynamicApi;
 using ZhonTai.Api.DynamicApi.Attributes;
 using Microsoft.AspNetCore.Mvc;
@@ -33,7 +32,7 @@ public class LoginLogService : BaseService, ILoginLogService, IDynamicApi
     /// <param name="request"></param>
     /// <returns></returns>
     [HttpPost]
-    public async Task<PageResponse<LoginLogGetPageResponse>> GetPageAsync(PageRequest<LoginLogGetPageFilter> request)
+    public async Task<PageResponse<LoginLogGetPageResponse>> GetPageAsync(PageRequest<LoginLogGetPageFilterRequest> request)
     {
         var userName = request.Filter?.CreatedUserName;
 
