@@ -1,18 +1,18 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace ZhonTai.Api.Core.Startup;
 
 /// <summary>
-/// HostApp中间件上下文
+/// 应用宿主上下文
 /// </summary>
-public class HostAppMiddlewareContext
+public class AppHostContext
 {
     /// <summary>
-    /// 应用
+    /// 服务
     /// </summary>
-    public WebApplication App { get; set; }
+    public IServiceCollection Services { get; set; }
 
     /// <summary>
     /// 环境

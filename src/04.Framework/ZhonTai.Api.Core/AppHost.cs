@@ -62,19 +62,19 @@ using SkyApm.Utilities.DependencyInjection;
 namespace ZhonTai.Api.Core;
 
 /// <summary>
-/// 宿主应用
+/// 应用宿主
 /// </summary>
-public class HostApp
+public class AppHost
 {
-    readonly HostAppOptions _hostAppOptions;
+    readonly AppHostOptions _appHostOptions;
 
-    public HostApp()
+    public AppHost()
     {
     }
 
-    public HostApp(HostAppOptions hostAppOptions)
+    public AppHost(AppHostOptions appHostOptions)
     {
-        _hostAppOptions = hostAppOptions;
+        _appHostOptions = appHostOptions;
     }
 
     /// <summary>
@@ -111,6 +111,9 @@ public class HostApp
     /// <param name="args"></param>
     public void Run(string[] args)
     {
+        var envV = Environment.GetEnvironmentVariable("ASPNETCORE_HOSTINGSTARTUPASSEMBLIES");
+        Environment.SetEnvironmentVariable("ASPNETCORE_HOSTINGSTARTUPASSEMBLIES", envV + ";SkyAPM.Agent.AspNetCore");
+
         var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
         try
         {
@@ -118,7 +121,7 @@ public class HostApp
             logger.Info("Application startup");
 
             var builder = WebApplication.CreateBuilder(args);
-            _hostAppOptions?.ConfigurePreWebApplicationBuilder?.Invoke(builder);
+            _appHostOptions?.ConfigurePreWebApplicationBuilder?.Invoke(builder);
 
             builder.ConfigureApplication(Assembly.GetCallingAssembly());
             //清空日志供应程序，避免.net自带日志输出到命令台
@@ -155,7 +158,7 @@ public class HostApp
             var dbConfig = AppInfo.GetOptions<DbConfig>();
             services.AddSingleton(dbConfig);
 
-            var hostAppContext = new HostAppContext()
+            var appHostContext = new AppHostContext()
             {
                 Services = services,
                 Environment = env,
@@ -176,7 +179,7 @@ public class HostApp
                 // 模块注入
                 builder.RegisterModule(new RegisterModule(appConfig));
 
-                _hostAppOptions?.ConfigureAutofacContainer?.Invoke(builder, hostAppContext);
+                _appHostOptions?.ConfigureAutofacContainer?.Invoke(builder, appHostContext);
             });
 
             //配置Kestrel服务器
@@ -189,7 +192,7 @@ public class HostApp
             //配置服务
             ConfigureServices(services, env, configuration, configHelper, appConfig);
 
-            _hostAppOptions?.ConfigureWebApplicationBuilder?.Invoke(builder);
+            _appHostOptions?.ConfigureWebApplicationBuilder?.Invoke(builder);
 
             var app = builder.Build();
 
@@ -235,19 +238,20 @@ public class HostApp
     /// <param name="appConfig"></param>
     private void ConfigureServices(IServiceCollection services, IWebHostEnvironment env, IConfiguration configuration, ConfigHelper configHelper, AppConfig appConfig)
     {
-        var hostAppContext = new HostAppContext()
+        var appHostContext = new AppHostContext()
         {
             Services = services,
             Environment = env,
             Configuration = configuration
         };
 
-        _hostAppOptions?.ConfigurePreServices?.Invoke(hostAppContext);
+        _appHostOptions?.ConfigurePreServices?.Invoke(appHostContext);
+
+        //链路追踪
+        services.AddSkyApmExtensions();
 
         //健康检查
         services.AddHealthChecks();
-
-        services.AddSkyApmExtensions();
         
         //权限处理
         services.AddScoped<IPermissionHandler, PermissionHandler>();
@@ -260,9 +264,9 @@ public class HostApp
         services.TryAddScoped<IUser, User>();
 
         //添加数据库
-        if (!_hostAppOptions.CustomInitDb)
+        if (!_appHostOptions.CustomInitDb)
         {
-            services.AddDb(env, _hostAppOptions);
+            services.AddDb(env, _appHostOptions);
         }
 
         //程序集
@@ -639,12 +643,12 @@ public class HostApp
         if (appConfig.Swagger.EnableJsonStringEnumConverter)
             mvcBuilder.AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 
-        _hostAppOptions?.ConfigureMvcBuilder?.Invoke(mvcBuilder, hostAppContext);
+        _appHostOptions?.ConfigureMvcBuilder?.Invoke(mvcBuilder, appHostContext);
         #endregion 控制器
 
         services.AddHttpClient();
 
-        _hostAppOptions?.ConfigureServices?.Invoke(hostAppContext);
+        _appHostOptions?.ConfigureServices?.Invoke(appHostContext);
 
         #region 缓存
         //添加内存缓存
@@ -712,7 +716,7 @@ public class HostApp
             options.FormatResult = appConfig.DynamicApi.FormatResult;
             options.FormatResultType = typeof(Response<>);
 
-            _hostAppOptions?.ConfigureDynamicApi?.Invoke(options);
+            _appHostOptions?.ConfigureDynamicApi?.Invoke(options);
         });
 
         services.AddCodeFirstGrpc(options =>
@@ -725,7 +729,7 @@ public class HostApp
         var policies = PolicyHelper.GetPolicyList();
         services.AddMyGrpcClients(AppInfo.EffectiveAssemblies, AppInfo.GetOptions<RpcConfig>(), policies);
 
-        _hostAppOptions?.ConfigurePostServices?.Invoke(hostAppContext);
+        _appHostOptions?.ConfigurePostServices?.Invoke(appHostContext);
     }
 
     /// <summary>
@@ -737,14 +741,14 @@ public class HostApp
     /// <param name="appConfig"></param>
     private void ConfigureMiddleware(WebApplication app, IWebHostEnvironment env, IConfiguration configuration, AppConfig appConfig)
     {
-        var hostAppMiddlewareContext = new HostAppMiddlewareContext()
+        var appHostMiddlewareContext = new AppHostMiddlewareContext()
         {
             App = app,
             Environment = env,
             Configuration = configuration
         };
 
-        _hostAppOptions?.ConfigurePreMiddleware?.Invoke(hostAppMiddlewareContext);
+        _appHostOptions?.ConfigurePreMiddleware?.Invoke(appHostMiddlewareContext);
 
         //异常处理
         app.UseMiddleware<ExceptionMiddleware>();
@@ -796,7 +800,7 @@ public class HostApp
         //配置端点
         app.MapControllers();
 
-        _hostAppOptions?.ConfigureMiddleware?.Invoke(hostAppMiddlewareContext);
+        _appHostOptions?.ConfigureMiddleware?.Invoke(appHostMiddlewareContext);
 
         #region Swagger Api文档
         if (env.IsDevelopment() || appConfig.Swagger.Enable)
@@ -844,6 +848,6 @@ public class HostApp
 
         app.MapCodeFirstGrpcReflectionService();
 
-        _hostAppOptions?.ConfigurePostMiddleware?.Invoke(hostAppMiddlewareContext);
+        _appHostOptions?.ConfigurePostMiddleware?.Invoke(appHostMiddlewareContext);
     }
 }

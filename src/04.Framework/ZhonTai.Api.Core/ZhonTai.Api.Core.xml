@@ -4,6 +4,46 @@
         <name>ZhonTai.Api.Core</name>
     </assembly>
     <members>
+        <member name="T:ZhonTai.Api.Core.AppHost">
+            <summary>
+            应用宿主
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Api.Core.AppHost.AddJsonFilesFromDirectory(Microsoft.Extensions.Configuration.ConfigurationManager,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            添加配置文件
+            </summary>
+            <param name="configuration">配置</param>
+            <param name="environmentName">环境名</param>
+            <param name="directory">目录</param>
+            <param name="optional">可选</param>
+            <param name="reloadOnChange">热更新</param>
+        </member>
+        <member name="M:ZhonTai.Api.Core.AppHost.Run(System.String[])">
+            <summary>
+            运行应用
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:ZhonTai.Api.Core.AppHost.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Configuration.IConfiguration,ZhonTai.Utils.Helpers.ConfigHelper,ZhonTai.Api.Core.Configs.AppConfig)">
+            <summary>
+            配置服务
+            </summary>
+            <param name="services"></param>
+            <param name="env"></param>
+            <param name="configuration"></param>
+            <param name="configHelper"></param>
+            <param name="appConfig"></param>
+        </member>
+        <member name="M:ZhonTai.Api.Core.AppHost.ConfigureMiddleware(Microsoft.AspNetCore.Builder.WebApplication,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Configuration.IConfiguration,ZhonTai.Api.Core.Configs.AppConfig)">
+            <summary>
+            配置中间件
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+            <param name="configuration"></param>
+            <param name="appConfig"></param>
+        </member>
         <member name="T:ZhonTai.Api.Core.AppInfo">
             <summary>
             应用全局信息
@@ -1211,7 +1251,7 @@
             <returns></returns>
             <exception cref="T:System.Exception"></exception>
         </member>
-        <member name="M:ZhonTai.Api.Core.Db.DbHelper.RegisterDb(FreeSql.FreeSqlCloud,ZhonTai.Api.Core.Auth.IUser,ZhonTai.Api.Core.Configs.DbConfig,ZhonTai.Api.Core.Configs.AppConfig,ZhonTai.Api.Core.Startup.HostAppOptions)">
+        <member name="M:ZhonTai.Api.Core.Db.DbHelper.RegisterDb(FreeSql.FreeSqlCloud,ZhonTai.Api.Core.Auth.IUser,ZhonTai.Api.Core.Configs.DbConfig,ZhonTai.Api.Core.Configs.AppConfig,ZhonTai.Api.Core.Startup.AppHostOptions)">
             <summary>
             注册数据库
             </summary>
@@ -1219,18 +1259,18 @@
             <param name="user"></param>
             <param name="dbConfig"></param>
             <param name="appConfig"></param>
-            <param name="hostAppOptions"></param>
+            <param name="appHostOptions"></param>
         </member>
-        <member name="M:ZhonTai.Api.Core.Db.DBServiceCollectionExtensions.AddDb(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Hosting.IHostEnvironment,ZhonTai.Api.Core.Startup.HostAppOptions)">
+        <member name="M:ZhonTai.Api.Core.Db.DBServiceCollectionExtensions.AddDb(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Hosting.IHostEnvironment,ZhonTai.Api.Core.Startup.AppHostOptions)">
             <summary>
             添加数据库
             </summary>
             <param name="services"></param>
             <param name="env"></param>
-            <param name="hostAppOptions"></param>
+            <param name="appHostOptions"></param>
             <returns></returns>
         </member>
-        <member name="M:ZhonTai.Api.Core.Db.DBServiceCollectionExtensions.AddTiDb(Microsoft.Extensions.DependencyInjection.IServiceCollection,ZhonTai.Api.Core.Startup.HostAppContext,System.String)">
+        <member name="M:ZhonTai.Api.Core.Db.DBServiceCollectionExtensions.AddTiDb(Microsoft.Extensions.DependencyInjection.IServiceCollection,ZhonTai.Api.Core.Startup.AppHostContext,System.String)">
             <summary>
             添加TiDb数据库
             </summary>
@@ -1868,46 +1908,6 @@
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
-        <member name="T:ZhonTai.Api.Core.HostApp">
-            <summary>
-            宿主应用
-            </summary>
-        </member>
-        <member name="M:ZhonTai.Api.Core.HostApp.AddJsonFilesFromDirectory(Microsoft.Extensions.Configuration.ConfigurationManager,System.String,System.String,System.Boolean,System.Boolean)">
-            <summary>
-            添加配置文件
-            </summary>
-            <param name="configuration">配置</param>
-            <param name="environmentName">环境名</param>
-            <param name="directory">目录</param>
-            <param name="optional">可选</param>
-            <param name="reloadOnChange">热更新</param>
-        </member>
-        <member name="M:ZhonTai.Api.Core.HostApp.Run(System.String[])">
-            <summary>
-            运行应用
-            </summary>
-            <param name="args"></param>
-        </member>
-        <member name="M:ZhonTai.Api.Core.HostApp.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Configuration.IConfiguration,ZhonTai.Utils.Helpers.ConfigHelper,ZhonTai.Api.Core.Configs.AppConfig)">
-            <summary>
-            配置服务
-            </summary>
-            <param name="services"></param>
-            <param name="env"></param>
-            <param name="configuration"></param>
-            <param name="configHelper"></param>
-            <param name="appConfig"></param>
-        </member>
-        <member name="M:ZhonTai.Api.Core.HostApp.ConfigureMiddleware(Microsoft.AspNetCore.Builder.WebApplication,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Configuration.IConfiguration,ZhonTai.Api.Core.Configs.AppConfig)">
-            <summary>
-            配置中间件
-            </summary>
-            <param name="app"></param>
-            <param name="env"></param>
-            <param name="configuration"></param>
-            <param name="appConfig"></param>
-        </member>
         <member name="M:ZhonTai.Api.Core.IdGenerator.IdHelper.SetIdGenerator(System.UInt16)">
             <summary>
             初始化Id生成器
@@ -2038,122 +2038,122 @@
             <param name="disableGlobalFilterNames">禁用全局过滤器名</param>
             <returns></returns>
         </member>
-        <member name="T:ZhonTai.Api.Core.Startup.HostAppContext">
+        <member name="T:ZhonTai.Api.Core.Startup.AppHostContext">
             <summary>
-            HostApp上下文
+            应用宿主上下文
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppContext.Services">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostContext.Services">
             <summary>
             服务
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppContext.Environment">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostContext.Environment">
             <summary>
             环境
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppContext.Configuration">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostContext.Configuration">
             <summary>
             配置
             </summary>
         </member>
-        <member name="T:ZhonTai.Api.Core.Startup.HostAppMiddlewareContext">
+        <member name="T:ZhonTai.Api.Core.Startup.AppHostMiddlewareContext">
             <summary>
-            HostApp中间件上下文
+            应用宿主中间件上下文
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppMiddlewareContext.App">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostMiddlewareContext.App">
             <summary>
             应用
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppMiddlewareContext.Environment">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostMiddlewareContext.Environment">
             <summary>
             环境
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppMiddlewareContext.Configuration">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostMiddlewareContext.Configuration">
             <summary>
             配置
             </summary>
         </member>
-        <member name="T:ZhonTai.Api.Core.Startup.HostAppOptions">
+        <member name="T:ZhonTai.Api.Core.Startup.AppHostOptions">
             <summary>
-            宿主应用配置
+            应用宿主配置
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigurePreWebApplicationBuilder">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigurePreWebApplicationBuilder">
             <summary>
             配置前置应用程序构建器
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigureWebApplicationBuilder">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigureWebApplicationBuilder">
             <summary>
             配置应用程序构建器
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigurePreServices">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigurePreServices">
             <summary>
             配置前置服务
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigureServices">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigureServices">
             <summary>
             配置服务
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigurePostServices">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigurePostServices">
             <summary>
             配置后置服务
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigureMvcBuilder">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigureMvcBuilder">
             <summary>
             配置mvc构建器
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigureAutofacContainer">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigureAutofacContainer">
             <summary>
             配置Autofac容器
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigurePreMiddleware">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigurePreMiddleware">
             <summary>
             配置前置中间件
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigureMiddleware">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigureMiddleware">
             <summary>
             配置中间件
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigurePostMiddleware">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigurePostMiddleware">
             <summary>
             配置后置中间件
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigureFreeSqlBuilder">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigureFreeSqlBuilder">
             <summary>
             配置FreeSql构建器
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigureFreeSql">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigureFreeSql">
             <summary>
             配置FreeSql
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigureDynamicApi">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigureDynamicApi">
             <summary>
             配置动态Api
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.ConfigureIdGenerator">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.ConfigureIdGenerator">
             <summary>
             配置雪花漂移算法
             </summary>
         </member>
-        <member name="P:ZhonTai.Api.Core.Startup.HostAppOptions.CustomInitDb">
+        <member name="P:ZhonTai.Api.Core.Startup.AppHostOptions.CustomInitDb">
             <summary>
             自定义数据库初始化
             </summary>

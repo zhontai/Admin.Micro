@@ -6,7 +6,7 @@ using ZhonTai.Api.Core.Consts;
 using ZhonTai.Api.Core.Configs;
 using ZhonTai.Module.Admin.HttpApi.Core.Extensions;
 
-new HostApp(new HostAppOptions
+new AppHost(new AppHostOptions
 {
     //配置FreeSql
     ConfigureFreeSql = (freeSql, dbConfig) =>

@@ -17,15 +17,15 @@ public static class DBServiceCollectionExtensions
     /// </summary>
     /// <param name="services"></param>
     /// <param name="env"></param>
-    /// <param name="hostAppOptions"></param>
+    /// <param name="appHostOptions"></param>
     /// <returns></returns>
-    public static void AddDb(this IServiceCollection services, IHostEnvironment env, HostAppOptions hostAppOptions)
+    public static void AddDb(this IServiceCollection services, IHostEnvironment env, AppHostOptions appHostOptions)
     {
         var dbConfig = AppInfo.GetOptions<DbConfig>();
         var appConfig = AppInfo.GetOptions<AppConfig>();
         var user = services.BuildServiceProvider().GetService<IUser>();
         var freeSqlCloud = appConfig.DistributeKey.IsNull() ? new FreeSqlCloud() : new FreeSqlCloud(appConfig.DistributeKey);
-        DbHelper.RegisterDb(freeSqlCloud, user, dbConfig, appConfig, hostAppOptions);
+        DbHelper.RegisterDb(freeSqlCloud, user, dbConfig, appConfig, appHostOptions);
 
         //注册多数据库
         if (dbConfig.Dbs?.Length > 0)
@@ -52,7 +52,7 @@ public static class DBServiceCollectionExtensions
     /// <param name="_"></param>
     /// <param name="context"></param>
     /// <param name="version">版本</param>
-    public static void AddTiDb(this IServiceCollection _, HostAppContext context, string version = "8.0")
+    public static void AddTiDb(this IServiceCollection _, AppHostContext context, string version = "8.0")
     {
         var dbConfig = AppInfo.GetOptions<DbConfig>();
         var _dicMySqlVersion = typeof(FreeSqlGlobalExtensions).GetField("_dicMySqlVersion", BindingFlags.NonPublic | BindingFlags.Static);

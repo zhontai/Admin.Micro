@@ -431,13 +431,13 @@ public class DbHelper
     /// <param name="user"></param>
     /// <param name="dbConfig"></param>
     /// <param name="appConfig"></param>
-    /// <param name="hostAppOptions"></param>
+    /// <param name="appHostOptions"></param>
     public static void RegisterDb(
         FreeSqlCloud freeSqlCloud,
         IUser user,
         DbConfig dbConfig,
         AppConfig appConfig,
-        HostAppOptions hostAppOptions
+        AppHostOptions appHostOptions
     )
     {
         //注册数据库
@@ -477,7 +477,7 @@ public class DbHelper
 
             #endregion 监听所有命令
 
-            hostAppOptions?.ConfigureFreeSqlBuilder?.Invoke(freeSqlBuilder, dbConfig);
+            appHostOptions?.ConfigureFreeSqlBuilder?.Invoke(freeSqlBuilder, dbConfig);
 
             var fsql = freeSqlBuilder.Build();
 
@@ -595,7 +595,7 @@ public class DbHelper
 
             #endregion 监听Curd操作
 
-            hostAppOptions?.ConfigureFreeSql?.Invoke(fsql, dbConfig);
+            appHostOptions?.ConfigureFreeSql?.Invoke(fsql, dbConfig);
 
             return fsql;
         }, idelTime);

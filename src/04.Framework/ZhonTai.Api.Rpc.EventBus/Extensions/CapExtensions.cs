@@ -47,7 +47,7 @@ public static class CapExtensions
 
             options.UseDashboard(dashboardOptions =>
             {
-                dashboardOptions.PathMatch = $"/{AppInfo.ModuleInfo.Name}/cap";
+                dashboardOptions.PathMatch = $"/cap/{AppInfo.ModuleInfo.Name}";
                 dashboardOptions.UseAuth = false;
             });
         });

@@ -9,7 +9,7 @@ using ZhonTai.Api.Rpc.Configs;
 using ZhonTai.Api.Rpc.Helpers;
 using ZhonTai.Module.App.Api.Core.Consts;
 
-new HostApp(new HostAppOptions()
+new AppHost(new AppHostOptions()
 {
     //配置前置服务
     ConfigurePreServices = context =>

@@ -2,7 +2,6 @@
 using FreeSql;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 using Yitter.IdGenerator;
 using ZhonTai.Api.Core.Configs;
 using ZhonTai.Api.DynamicApi;
@@ -10,9 +9,9 @@ using ZhonTai.Api.DynamicApi;
 namespace ZhonTai.Api.Core.Startup;
 
 /// <summary>
-/// 宿主应用配置
+/// 应用宿主配置
 /// </summary>
-public class HostAppOptions
+public class AppHostOptions
 {
     /// <summary>
     /// 配置前置应用程序构建器
@@ -27,42 +26,42 @@ public class HostAppOptions
     /// <summary>
     /// 配置前置服务
     /// </summary>
-    public Action<HostAppContext> ConfigurePreServices { get; set; }
+    public Action<AppHostContext> ConfigurePreServices { get; set; }
 
     /// <summary>
     /// 配置服务
     /// </summary>
-    public Action<HostAppContext> ConfigureServices { get; set; }
+    public Action<AppHostContext> ConfigureServices { get; set; }
 
     /// <summary>
     /// 配置后置服务
     /// </summary>
-    public Action<HostAppContext> ConfigurePostServices { get; set; }
+    public Action<AppHostContext> ConfigurePostServices { get; set; }
 
     /// <summary>
     /// 配置mvc构建器
     /// </summary>
-    public Action<IMvcBuilder, HostAppContext> ConfigureMvcBuilder { get; set; }
+    public Action<IMvcBuilder, AppHostContext> ConfigureMvcBuilder { get; set; }
 
     /// <summary>
     /// 配置Autofac容器
     /// </summary>
-    public Action<ContainerBuilder, HostAppContext> ConfigureAutofacContainer { get; set; }
+    public Action<ContainerBuilder, AppHostContext> ConfigureAutofacContainer { get; set; }
 
     /// <summary>
     /// 配置前置中间件
     /// </summary>
-    public Action<HostAppMiddlewareContext> ConfigurePreMiddleware { get; set; }
+    public Action<AppHostMiddlewareContext> ConfigurePreMiddleware { get; set; }
 
     /// <summary>
     /// 配置中间件
     /// </summary>
-    public Action<HostAppMiddlewareContext> ConfigureMiddleware { get; set; }
+    public Action<AppHostMiddlewareContext> ConfigureMiddleware { get; set; }
 
     /// <summary>
     /// 配置后置中间件
     /// </summary>
-    public Action<HostAppMiddlewareContext> ConfigurePostMiddleware { get; set; }
+    public Action<AppHostMiddlewareContext> ConfigurePostMiddleware { get; set; }
 
     /// <summary>
     /// 配置FreeSql构建器

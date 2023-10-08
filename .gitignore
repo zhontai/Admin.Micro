@@ -405,3 +405,4 @@ FodyWeavers.xsd
 !**/Http/Log
 !**/Repositories/Log
 !**/Services/Log
+!**/admin/logs
