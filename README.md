@@ -85,8 +85,7 @@ cd Admin.Micro
 ```
 
 如何运行所有微服务项目：
-```bash
-
+```
 1、安装Tye
 dotnet tool install -g Microsoft.Tye --version "0.11.0-alpha.22111.1"
 或
@@ -106,7 +105,7 @@ tye地址：http://localhost:8000
 ```
 
 如何选择调试正在运行的微服务项目：
-```bash
+```
 1、vs安装拓展Tim's Tye Explorer
 
 2、打开VS的 视图-> 其他窗口 -> Tye Explorer，启动Tye Explorer窗口
@@ -119,19 +118,18 @@ tye地址：http://localhost:8000
 如何使用链路追踪微服务：
 ```bash
 windows安装：
+
 1、安装SkyWalking APM
 https://skywalking.apache.org/downloads
-Distribution选择最新版本tar
+在Distribution处选择最新版本tar
 https://www.apache.org/dyn/closer.cgi/skywalking/9.6.0/apache-skywalking-apm-9.6.0.tar.gz
 
+安装java环境
 https://www.oracle.com/java/technologies/downloads
-jdk >= java11 
-选择jdk17
-系统属性->高级->环境变量-> 系统变量
-JAVA_HOME
-C:\Program Files\Java\jdk-17
-Path
-%JAVA_HOME%\bin
+需要jdk >= java11，选择jdk17
+设置环境变量：系统属性->高级->环境变量-> 系统变量
+新建 JAVA_HOME C:\Program Files\Java\jdk-17
+编辑 Path %JAVA_HOME%\bin
 
 2、运行SkyWalking APM
 cmd F:\apache-skywalking-apm-9.6.0\apache-skywalking-apm-bin\bin
