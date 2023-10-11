@@ -142,8 +142,6 @@ public class AppHost
                 configuration.AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
             }
 
-            var configHelper = new ConfigHelper();
-
             services.Configure<AppConfig>(configuration.GetSection("ApiConfig:AppConfig"));
             services.Configure<JwtConfig>(configuration.GetSection("ApiConfig:JwtConfig"));
             services.Configure<DbConfig>(configuration.GetSection("ApiConfig:DbConfig"));
@@ -190,7 +188,7 @@ public class AppHost
             });
 
             //配置服务
-            ConfigureServices(services, env, configuration, configHelper, appConfig);
+            ConfigureServices(services, env, configuration, appConfig);
 
             _appHostOptions?.ConfigureWebApplicationBuilder?.Invoke(builder);
 
@@ -234,9 +232,8 @@ public class AppHost
     /// <param name="services"></param>
     /// <param name="env"></param>
     /// <param name="configuration"></param>
-    /// <param name="configHelper"></param>
     /// <param name="appConfig"></param>
-    private void ConfigureServices(IServiceCollection services, IWebHostEnvironment env, IConfiguration configuration, ConfigHelper configHelper, AppConfig appConfig)
+    private void ConfigureServices(IServiceCollection services, IWebHostEnvironment env, IConfiguration configuration, AppConfig appConfig)
     {
         var appHostContext = new AppHostContext()
         {
