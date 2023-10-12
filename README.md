@@ -8,7 +8,6 @@
 		<a href="https://freesql.net" target="_blank">
 			<img src="https://img.shields.io/nuget/v/FreeSql?label=FreeSql&color=blue" alt="FreeSql">
 		</a>
-		
 		<a href="https://github.com/grpc/grpc-dotnet" target="_blank">
 			<img src="https://img.shields.io/nuget/v/Grpc.Core.Api?label=Grpc&color=yellow" alt="Grpc">
 		</a>
