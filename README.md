@@ -8,12 +8,7 @@
 		<a href="https://freesql.net" target="_blank">
 			<img src="https://img.shields.io/nuget/v/FreeSql?label=FreeSql&color=blue" alt="FreeSql">
 		</a>
-		<a href="https://github.com/microsoft/reverse-proxy" target="_blank">
-			<img src="https://img.shields.io/nuget/v/Yarp.ReverseProxy?label=Yarp&color=blueviolet" alt="Yarp">
-		</a>
-		<a href="https://github.com/rivenfx/Mapster-docs" target="_blank">
-			<img src="https://img.shields.io/nuget/v/nacos-sdk-csharp.Extensions.Configuration?label=Nacos&color=orange" alt="Nacos">
-		</a>
+		
 		<a href="https://github.com/grpc/grpc-dotnet" target="_blank">
 			<img src="https://img.shields.io/nuget/v/Grpc.Core.Api?label=Grpc&color=yellow" alt="Grpc">
 		</a>
@@ -21,10 +16,7 @@
 			<img src="https://img.shields.io/nuget/v/DotNetCore.CAP?label=CAP&color=yellowgreen" alt="Cap">
 		</a>
 		<a href="https://github.com/reactiveui/refit" target="_blank">
-			<img src="https://img.shields.io/nuget/v/Refit?label=Refit&color=navy" alt="Refit">
-		</a>
-		<a href="https://github.com/SkyAPM/SkyAPM-dotnet" target="_blank">
-			<img src="https://img.shields.io/nuget/v/SkyAPM.Agent.AspNetCore?label=SkyAPM&color=green" alt="Refit">
+			<img src="https://img.shields.io/nuget/v/Refit?label=Refit&color=green" alt="Refit">
 		</a>
 		<a href="https://github.com/zhontai/admin.ui.plus/blob/master/LICENSE" target="_blank">
 			<img src="https://img.shields.io/badge/license-MIT-success" alt="license">
@@ -116,7 +108,7 @@ tye地址：http://localhost:8000
 ```
 
 如何使用链路追踪微服务：
-```bash
+```
 windows安装：
 
 1、安装SkyWalking APM
@@ -182,5 +174,5 @@ http://localhost:8080
 
 #### 💌 支持作者
 
-如果觉得框架不错，或者已经在使用了，希望你可以去 <a target="_blank" href="https://github.com/zhontai/admin.core">Github</a> 或者
-<a target="_blank" href="https://gitee.com/zhontai/admin.core">Gitee</a> 帮我点个 ⭐ Star，这将是对我极大的鼓励与支持。
+如果觉得框架不错，或者已经在使用了，希望你可以去 <a target="_blank" href="https://github.com/zhontai/Admin.Micro">Github</a> 或者
+<a target="_blank" href="https://gitee.com/zhontai/Admin.Micro">Gitee</a> 帮我点个 ⭐ Star，这将是对我极大的鼓励与支持。
