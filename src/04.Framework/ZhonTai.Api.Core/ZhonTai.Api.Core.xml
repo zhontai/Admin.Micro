@@ -25,14 +25,13 @@
             </summary>
             <param name="args"></param>
         </member>
-        <member name="M:ZhonTai.Api.Core.AppHost.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Configuration.IConfiguration,ZhonTai.Utils.Helpers.ConfigHelper,ZhonTai.Api.Core.Configs.AppConfig)">
+        <member name="M:ZhonTai.Api.Core.AppHost.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Configuration.IConfiguration,ZhonTai.Api.Core.Configs.AppConfig)">
             <summary>
             配置服务
             </summary>
             <param name="services"></param>
             <param name="env"></param>
             <param name="configuration"></param>
-            <param name="configHelper"></param>
             <param name="appConfig"></param>
         </member>
         <member name="M:ZhonTai.Api.Core.AppHost.ConfigureMiddleware(Microsoft.AspNetCore.Builder.WebApplication,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Configuration.IConfiguration,ZhonTai.Api.Core.Configs.AppConfig)">
