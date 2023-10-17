@@ -75,7 +75,7 @@ cd Admin.Micro
 选择 ZhonTai.Module.Admin.WebHost 右键菜单点击发布
 ```
 
-如何运行所有微服务项目：
+运行所有微服务项目：
 ```
 1、安装Tye
 dotnet tool install -g Microsoft.Tye --version "0.11.0-alpha.22111.1"
@@ -95,7 +95,7 @@ tye地址：http://localhost:8000
 应用接口文档地址：http://localhost:11020/doc/app
 ```
 
-如何选择调试正在运行的微服务项目：
+选择调试正在运行的微服务项目：
 ```
 1、vs安装拓展Tim's Tye Explorer
 
@@ -106,7 +106,7 @@ tye地址：http://localhost:8000
 注意：每次tye run 运行后点击Tye Explorer窗口刷新按钮
 ```
 
-如何使用链路追踪微服务：
+使用链路追踪微服务：
 ```
 windows安装：
 
@@ -126,9 +126,42 @@ https://www.oracle.com/java/technologies/downloads
 cmd F:\apache-skywalking-apm-9.6.0\apache-skywalking-apm-bin\bin
 cmd startup.bat
 
-3、访问
+3、访问SkyWalking APM
 http://localhost:8080
 ```
+
+Naco服务注册与发现&配置中心：
+```
+windows安装：
+
+1、下载https://download.fastgit.org/alibaba/nacos/releases/download/2.2.3/nacos-server-2.2.3.zip
+
+2、 cd nacos/bin
+
+3、启动命令(standalone代表着单机模式运行，非集群模式):
+
+startup.cmd -m standalone
+
+4、访问nacos
+http://localhost:8848/nacos
+```
+
+命名空间（手动）
+
+新建命名空间（注意appsettings.json的命名空间Namespace等于命名空间ID）
+
+配置管理（手动）
+
+进入配置列表界面，选择命名空间，点击创建配置，输入Data ID，选择JSON，输入配置内容，点击发布。
+
+::: tip 注意
+服务发现
+nacos 里面做了一个约定，把 gRPC 的服务端口设置成 nacos 启动的端口加 1000。
+也就是说，nacos 的端口是 8848 的话，那么 gRPC 服务端口就是 9848。
+
+新建服务时
+保护阈值填写为一个介于 0 到 1 之间的值，表示健康实例的占比。例如，如果设置为 0.5，则意味着当健康实例占比低于 50% 时，服务会触发保护机制。
+:::
 
 #### 📚 开发文档
 
