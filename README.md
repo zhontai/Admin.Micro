@@ -55,7 +55,7 @@
 
 > 使用 .Net 最新版本 <a href="https://dotnet.microsoft.com/download/dotnet-core" target="_blank">.Net 版本 > 7.0+</a>
 
-使用项目源码新建项目
+#### 使用项目源码新建项目
 
 ```bash
 # 克隆项目
@@ -75,7 +75,7 @@ cd Admin.Micro
 选择 ZhonTai.Module.Admin.WebHost 右键菜单点击发布
 ```
 
-#运行&调试微服务项目：
+#### 运行&调试微服务项目：
 
 1、安装Tye
 ```
@@ -88,9 +88,11 @@ dotnet tool install -g Microsoft.Tye --version "0.12.0-*" --add-source https://p
 ```
 1、vs安装拓展EasyRun
 
-2、点击Tye按钮运行
+2、打开VS的 视图-> 其他窗口 -> Easy Run，点击打开Easy Run窗口
 
-3、选择要调试的微服务点击Debugger按钮开启调试
+3、点击Tye按钮运行
+
+4、选择要调试的微服务点击Debugger按钮开启调试
 ```
 或
 ```
@@ -98,14 +100,13 @@ dotnet tool install -g Microsoft.Tye --version "0.12.0-*" --add-source https://p
 
 2、vs安装拓展Tim's Tye Explorer
 
-3、打开VS的 视图-> 其他窗口 -> Tye Explorer，启动Tye Explorer窗口
+3、打开VS的 视图-> 其他窗口 -> Tye Explorer，点击打开Tye Explorer窗口
 
 4、选择要调试的微服务点击Attach to selected 开启调试
 
 注意：每次tye run 运行后点击Tye Explorer窗口刷新按钮附加最新进程，退出微服务Ctrl + C
 ```
 
-```
 tye地址：http://localhost:8000
 
 企业网关地址：http://localhost:10010
@@ -113,12 +114,12 @@ tye地址：http://localhost:8000
 权限接口文档地址：http://localhost:11010/doc/admin
 
 应用接口文档地址：http://localhost:11020/doc/app
-```
 
-使用链路追踪微服务：
-```
+
+#### 使用链路追踪微服务
+
 windows安装：
-
+```
 1、安装SkyWalking APM
 https://skywalking.apache.org/downloads
 在Distribution处选择最新版本tar
@@ -139,9 +140,10 @@ cmd startup.bat
 http://localhost:8080
 ```
 
-Naco服务注册与发现&配置中心：
-```
+#### Naco服务注册与发现&配置中心
+
 windows安装：
+```
 
 1、下载https://download.fastgit.org/alibaba/nacos/releases/download/2.2.3/nacos-server-2.2.3.zip
 
@@ -165,12 +167,12 @@ http://localhost:8848/nacos
 进入配置列表界面，选择命名空间，点击创建配置，输入Data ID，选择JSON，输入配置内容，点击发布。
 ```
 
->GRPC端口说明
+GRPC端口说明
 
 >nacos 里面做了一个约定，把 GRPC 的服务端口设置成 nacos 启动的端口加 1000。
 也就是说，nacos 的端口是 8848 的话，那么 GRPC 服务端口就是 9848。
 
->服务保护阈值说明
+服务保护阈值说明
 
 >保护阈值填写为一个介于 0 到 1 之间的值，表示健康实例的占比。
 例如，如果设置为 0.5，则意味着当健康实例占比低于 50% 时，服务会触发保护机制。
