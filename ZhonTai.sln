@@ -45,6 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.SlnFiles", "01.SlnFiles"
 	ProjectSection(SolutionItems) = preProject
 		build\pkg.props = build\pkg.props
 		tye.yaml = tye.yaml
+		ZhonTai.sln.EasyRun.json = ZhonTai.sln.EasyRun.json
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZhonTai.Api.Rpc.Grpc", "src\04.Framework\ZhonTai.Api.Rpc.Grpc\ZhonTai.Api.Rpc.Grpc.csproj", "{FD2A6526-6BB5-4F2F-B0D7-18D60C06FC29}"
@@ -69,7 +70,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZhonTai.Module.Admin.Contra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZhonTai.Api.Rpc.EventBus", "src\04.Framework\ZhonTai.Api.Rpc.EventBus\ZhonTai.Api.Rpc.EventBus.csproj", "{0CEDFF5F-F331-4160-8E51-E57C1E47DE83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZhonTai.Api.Rpc", "src\04.Framework\ZhonTai.Api.Rpc\ZhonTai.Api.Rpc.csproj", "{9A3E37EC-E19D-4366-9D1B-8C3368F02DF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZhonTai.Api.Rpc", "src\04.Framework\ZhonTai.Api.Rpc\ZhonTai.Api.Rpc.csproj", "{9A3E37EC-E19D-4366-9D1B-8C3368F02DF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,60 @@
+{
+  "Profiles": [
+    {
+      "Name": "micro-service",
+      "Filter": ".Host|.Gateway",
+      "UseTye": true,
+      "TyePort": 10000,
+      "LoggingTargetType": 0,
+      "LoggingPath": "./.logs",
+      "LoggerUrl": null,
+      "Services": [
+        {
+          "ServiceType": 0,
+          "Name": "ZhonTai.Gateway.Corp",
+          "TyeName": null,
+          "Bindings": "::10010",
+          "Arguments": null,
+          "EnvVariables": null,
+          "Replicas": 1,
+          "ProjectFile": "src\\02.Gateways\\ZhonTai.Gateway.Corp\\ZhonTai.Gateway.Corp.csproj",
+          "DefaultSelected": false
+        },
+        {
+          "ServiceType": 0,
+          "Name": "ZhonTai.Module.Admin.Tests",
+          "TyeName": null,
+          "Bindings": null,
+          "Arguments": null,
+          "EnvVariables": null,
+          "Replicas": 1,
+          "ProjectFile": "src\\03.Modules\\Admin\\ZhonTai.Module.Admin.Tests\\ZhonTai.Module.Admin.Tests.csproj",
+          "DefaultSelected": false
+        },
+        {
+          "ServiceType": 0,
+          "Name": "ZhonTai.Module.Admin.WebHost",
+          "TyeName": null,
+          "Bindings": "::11010",
+          "Arguments": null,
+          "EnvVariables": null,
+          "Replicas": 1,
+          "ProjectFile": "src\\03.Modules\\Admin\\ZhonTai.Module.Admin.WebHost\\ZhonTai.Module.Admin.WebHost.csproj",
+          "DefaultSelected": false
+        },
+        {
+          "ServiceType": 0,
+          "Name": "ZhonTai.Module.App.Host",
+          "TyeName": null,
+          "Bindings": "::11020",
+          "Arguments": null,
+          "EnvVariables": null,
+          "Replicas": 1,
+          "ProjectFile": "src\\03.Modules\\app\\ZhonTai.Module.App\\src\\hosts\\ZhonTai.Module.App.Host\\ZhonTai.Module.App.Host.csproj",
+          "DefaultSelected": false
+        }
+      ]
+    }
+  ],
+  "SettingsId": "22df9b57-0404-4ae7-b660-932e0e981fe4"
+}

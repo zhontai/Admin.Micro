@@ -75,17 +75,37 @@ cd Admin.Micro
 选择 ZhonTai.Module.Admin.WebHost 右键菜单点击发布
 ```
 
-运行所有微服务项目：
-```
+#运行&调试微服务项目：
+
 1、安装Tye
+```
 dotnet tool install -g Microsoft.Tye --version "0.11.0-alpha.22111.1"
 或
 dotnet tool install -g Microsoft.Tye --version "0.12.0-*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet6/nuget/v3/index.json
+```
 
-2、在Admin.Micro目录下Cmd命令运行后输入tye run
+2、运行&调试
+```
+1、vs安装拓展EasyRun
 
-3、退出微服务Ctrl + C
+2、点击Tye按钮运行
 
+3、选择要调试的微服务点击Debugger按钮开启调试
+```
+或
+```
+1、在Admin.Micro目录下Cmd命令运行后输入tye run
+
+2、vs安装拓展Tim's Tye Explorer
+
+3、打开VS的 视图-> 其他窗口 -> Tye Explorer，启动Tye Explorer窗口
+
+4、选择要调试的微服务点击Attach to selected 开启调试
+
+注意：每次tye run 运行后点击Tye Explorer窗口刷新按钮附加最新进程，退出微服务Ctrl + C
+```
+
+```
 tye地址：http://localhost:8000
 
 企业网关地址：http://localhost:10010
@@ -93,17 +113,6 @@ tye地址：http://localhost:8000
 权限接口文档地址：http://localhost:11010/doc/admin
 
 应用接口文档地址：http://localhost:11020/doc/app
-```
-
-选择调试正在运行的微服务项目：
-```
-1、vs安装拓展Tim's Tye Explorer
-
-2、打开VS的 视图-> 其他窗口 -> Tye Explorer，启动Tye Explorer窗口
-
-3、选择要调试的微服务点击Attach to selected 就可以附加到进程进行调试
-
-注意：每次tye run 运行后点击Tye Explorer窗口刷新按钮
 ```
 
 使用链路追踪微服务：
@@ -146,6 +155,7 @@ startup.cmd -m standalone
 http://localhost:8848/nacos
 ```
 
+```
 命名空间（手动）
 
 新建命名空间（注意appsettings.json的命名空间Namespace等于命名空间ID）
@@ -153,15 +163,17 @@ http://localhost:8848/nacos
 配置管理（手动）
 
 进入配置列表界面，选择命名空间，点击创建配置，输入Data ID，选择JSON，输入配置内容，点击发布。
+```
 
-::: tip 注意
-服务发现
-nacos 里面做了一个约定，把 gRPC 的服务端口设置成 nacos 启动的端口加 1000。
-也就是说，nacos 的端口是 8848 的话，那么 gRPC 服务端口就是 9848。
+>GRPC端口说明
 
-新建服务时
-保护阈值填写为一个介于 0 到 1 之间的值，表示健康实例的占比。例如，如果设置为 0.5，则意味着当健康实例占比低于 50% 时，服务会触发保护机制。
-:::
+>nacos 里面做了一个约定，把 GRPC 的服务端口设置成 nacos 启动的端口加 1000。
+也就是说，nacos 的端口是 8848 的话，那么 GRPC 服务端口就是 9848。
+
+>服务保护阈值说明
+
+>保护阈值填写为一个介于 0 到 1 之间的值，表示健康实例的占比。
+例如，如果设置为 0.5，则意味着当健康实例占比低于 50% 时，服务会触发保护机制。
 
 #### 📚 开发文档
 
