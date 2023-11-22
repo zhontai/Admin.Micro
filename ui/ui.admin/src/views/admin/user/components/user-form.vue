@@ -63,14 +63,22 @@
             </el-form-item>
           </el-col>
           <el-col v-if="!isUpdate" :xs="12" :sm="12" :md="12" :lg="12" :xl="12">
-            <el-form-item prop="password">
+            <el-form-item prop="password" :rules="[{ validator: validatorPwd, trigger: ['blur', 'change'] }]">
               <template #label
                 ><div class="my-flex-y-center">
-                  密码<el-tooltip effect="dark" content="选填，不填则使用系统默认密码" placement="top" hide-after="0">
+                  密码<el-tooltip effect="dark" placement="top" hide-after="0">
+                    <template #content>选填，不填则使用系统默认密码<br />字母+数字+可选特殊字符，长度在6-16之间</template>
                     <SvgIcon name="ele-InfoFilled" class="ml5" />
                   </el-tooltip></div
               ></template>
-              <el-input key="password" v-model="form.password" show-password autocomplete="off" />
+              <el-input
+                key="password"
+                v-model="form.password"
+                placeholder="选填，不填则使用系统默认密码"
+                @input="onInputPwd"
+                show-password
+                autocomplete="off"
+              />
             </el-form-item>
           </el-col>
           <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
@@ -124,8 +132,10 @@ import { RoleApi } from '/@/api/admin/Role'
 import { listToTree, treeToList } from '/@/utils/tree'
 import { cloneDeep } from 'lodash-es'
 import { isMobile, testMobile, testEmail } from '/@/utils/test'
+import { validatorPwd } from '/@/utils/validators'
 import eventBus from '/@/utils/mitt'
 import { FormInstance } from 'element-plus'
+import { verifyCnAndSpace } from '/@/utils/toolsValidate'
 
 // 引入组件
 const MySelectUser = defineAsyncComponent(() => import('./my-select-user.vue'))
@@ -244,6 +254,11 @@ const open = async (row: UserUpdateInput & UserUpdateInput) => {
 
   proxy.$modal.closeLoading()
   state.showDialog = true
+}
+
+// 输入密码
+const onInputPwd = (val: string) => {
+  state.form.password = verifyCnAndSpace(val)
 }
 
 //手机号失去焦点

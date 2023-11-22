@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZhonTai.Api.Rpc</name>
+    </assembly>
+    <members>
+        <member name="T:ZhonTai.Api.Rpc.Attributes.HttpClientContractAttribute">
+            <summary>
+            Http接口客户端契约
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Attributes.HttpClientContractAttribute.ModuleName">
+            <summary>
+            模块名
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.ValidateRequiredAttribute">
+            <summary>
+            指定属性、字段、参数必填
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Configs.RpcConfig">
+            <summary>
+            远程过程调用配置
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Configs.RpcConfig.AddressList">
+            <summary>
+            地址列表
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Configs.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Configs.Address.ModuleName">
+            <summary>
+            模块名
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Configs.Address.ApiUrl">
+            <summary>
+            接口地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Configs.Address.GrpcUrl">
+            <summary>
+            Grpc地址
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.DataPermissionResponse.OrgId">
+            <summary>
+            部门Id
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.DataPermissionResponse.OrgIds">
+            <summary>
+            部门列表
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.DataPermissionResponse.DataScope">
+            <summary>
+            数据范围
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Dtos.IResponse">
+            <summary>
+            响应接口
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.IResponse.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.IResponse.Msg">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.IResponse.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Dtos.IResponse`1">
+            <summary>
+            泛型响应接口
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.IResponse`1.Data">
+            <summary>
+            返回数据
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Dtos.PageRequest">
+            <summary>
+            分页信息输入
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.PageRequest.CurrentPage">
+            <summary>
+            当前页标
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.PageRequest.PageSize">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.PageRequest.DynamicFilter">
+            <summary>
+            高级查询条件
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Dtos.PageRequest`1">
+            <summary>
+            分页信息输入
+            </summary>
+            <typeparam name="T">过滤数据</typeparam>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.PageRequest`1.Filter">
+            <summary>
+            查询条件
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Dtos.PageResponse`1">
+            <summary>
+            分页信息响应
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.PageResponse`1.Total">
+            <summary>
+            数据总数
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.PageResponse`1.List">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Dtos.Response`1">
+            <summary>
+            结果输出
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.Response`1.Success">
+            <summary>
+            是否成功标记
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.Response`1.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.Response`1.Msg">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Dtos.Response`1.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Api.Rpc.Dtos.Response`1.Ok(`0,System.String)">
+            <summary>
+            成功
+            </summary>
+            <param name="data">数据</param>
+            <param name="msg">消息</param>
+        </member>
+        <member name="M:ZhonTai.Api.Rpc.Dtos.Response`1.NotOk(System.String,`0)">
+            <summary>
+            失败
+            </summary>
+            <param name="msg">消息</param>
+            <param name="data">数据</param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Dtos.Response">
+            <summary>
+            静态结果输出
+            </summary>
+        </member>
+        <member name="M:ZhonTai.Api.Rpc.Dtos.Response.Ok``1(``0,System.String)">
+            <summary>
+            成功
+            </summary>
+            <param name="data">数据</param>
+            <param name="msg">消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Api.Rpc.Dtos.Response.Ok">
+            <summary>
+            成功
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Api.Rpc.Dtos.Response.NotOk``1(System.String,``0)">
+            <summary>
+            失败
+            </summary>
+            <param name="msg">消息</param>
+            <param name="data">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Api.Rpc.Dtos.Response.NotOk(System.String)">
+            <summary>
+            失败
+            </summary>
+            <param name="msg">消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Api.Rpc.Dtos.Response.Result``1(System.Boolean)">
+            <summary>
+            根据布尔值返回结果
+            </summary>
+            <param name="success"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Api.Rpc.Dtos.Response.Result(System.Boolean)">
+            <summary>
+            根据布尔值返回结果
+            </summary>
+            <param name="success"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZhonTai.Api.Rpc.Dtos.Response.Exception(System.String,System.String)">
+            <summary>
+            系统异常
+            </summary>
+            <param name="msg">消息</param>
+            <param name="code">编码</param>
+            <returns></returns>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Enums.DataScope">
+            <summary>
+            数据范围
+            </summary>
+        </member>
+        <member name="F:ZhonTai.Api.Rpc.Enums.DataScope.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="F:ZhonTai.Api.Rpc.Enums.DataScope.DeptWithChild">
+            <summary>
+            本部门和下级部门
+            </summary>
+        </member>
+        <member name="F:ZhonTai.Api.Rpc.Enums.DataScope.Dept">
+            <summary>
+            本部门
+            </summary>
+        </member>
+        <member name="F:ZhonTai.Api.Rpc.Enums.DataScope.Self">
+            <summary>
+            本人数据
+            </summary>
+        </member>
+        <member name="F:ZhonTai.Api.Rpc.Enums.DataScope.Custom">
+            <summary>
+            指定部门
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Enums.TenantType">
+            <summary>
+            租户类型
+            </summary>
+        </member>
+        <member name="F:ZhonTai.Api.Rpc.Enums.TenantType.Platform">
+            <summary>
+            平台
+            </summary>
+        </member>
+        <member name="F:ZhonTai.Api.Rpc.Enums.TenantType.Tenant">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Enums.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="F:ZhonTai.Api.Rpc.Enums.UserType.Member">
+            <summary>
+            会员
+            </summary>
+        </member>
+        <member name="F:ZhonTai.Api.Rpc.Enums.UserType.DefaultUser">
+            <summary>
+            普通用户
+            </summary>
+        </member>
+        <member name="F:ZhonTai.Api.Rpc.Enums.UserType.TenantAdmin">
+            <summary>
+            租户管理员
+            </summary>
+        </member>
+        <member name="F:ZhonTai.Api.Rpc.Enums.UserType.PlatformAdmin">
+            <summary>
+            平台管理员
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Exceptions.AppException">
+            <summary>
+            系统异常
+            </summary>
+        </member>
+    </members>
+</doc>

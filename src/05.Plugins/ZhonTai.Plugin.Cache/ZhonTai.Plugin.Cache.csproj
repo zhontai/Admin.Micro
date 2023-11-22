@@ -5,7 +5,6 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<DocumentationFile>ZhonTai.Plugin.Cache.xml</DocumentationFile>
 		<NoWarn>1701;1702;1591;8632</NoWarn>
 		<OutputPath></OutputPath>
 	</PropertyGroup>
@@ -15,8 +14,8 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="FreeRedis" Version="1.1.5" />
-		<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="7.0.0" />
+		<PackageReference Include="FreeRedis" Version="1.2.6" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="8.0.0" />
 	</ItemGroup>
 	
 	<ItemGroup>

@@ -108,6 +108,17 @@
             <el-input v-model="state.ruleForm.a12" @input="onVerifyPassword($event)" placeholder="请输入密码进行测试" maxlength="16"> </el-input>
           </div>
         </el-form-item>
+        <el-form-item label="混合密码:" prop="a25" class="mt20">
+          <div class="tools-warp-form-msg">
+            验证混合密码是否正确。字母+数字+可选特殊字符，长度在6-16之间 (true: 正确，false: 不正确)。<span class="tools-warp-form-msg-red">{{
+              state.passwordHybrid
+            }}</span>
+          </div>
+          <div>
+            <el-input v-model="state.ruleForm.a25" @input="onVerifyPasswordHybrid($event)" placeholder="请输入密码进行测试" maxlength="16">
+            </el-input>
+          </div>
+        </el-form-item>
         <el-form-item label="强密码:" prop="a13" class="mt20">
           <div class="tools-warp-form-msg">
             验证强密码是否正确。字母+数字+特殊字符，长度在6-16之间 (true: 正确，false: 不正确)。<span class="tools-warp-form-msg-red">{{
@@ -209,6 +220,7 @@ import {
   verifyTelPhone,
   verifyAccount,
   verifyPassword,
+  verifyPasswordHybrid,
   verifyPasswordPowerful,
   verifyPasswordStrength,
   verifyIPAddress,
@@ -228,6 +240,7 @@ const state = reactive({
   telePhone: false,
   account: false,
   password: false,
+  passwordHybrid: false,
   passwordPowerful: false,
   passwordStrength: '',
   iPAddress: false,
@@ -265,6 +278,7 @@ const state = reactive({
     a21: '',
     a22: '',
     a23: '',
+    a25: '',
   },
   rules: {
     a1: [
@@ -408,6 +422,11 @@ const onVerifyAccount = (val: string) => {
 const onVerifyPassword = (val: string) => {
   state.ruleForm.a12 = verifyCnAndSpace(val)
   state.password = verifyPassword(state.ruleForm.a12)
+}
+// 混合密码
+const onVerifyPasswordHybrid = (val: string) => {
+  state.ruleForm.a25 = verifyCnAndSpace(val)
+  state.passwordHybrid = verifyPasswordHybrid(state.ruleForm.a25)
 }
 // 强密码
 const onVerifyPasswordPowerful = (val: string) => {

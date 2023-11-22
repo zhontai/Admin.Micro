@@ -93,6 +93,7 @@
         </el-card>
 
         <user-form ref="userFormRef" :title="state.userFormTitle"></user-form>
+        <user-reset-pwd ref="userRestPwdRef" title="提示"></user-reset-pwd>
       </div>
     </pane>
   </my-layout>
@@ -100,7 +101,7 @@
 
 <script lang="ts" setup name="admin/user">
 import { ref, reactive, onMounted, getCurrentInstance, onBeforeMount, defineAsyncComponent } from 'vue'
-import { UserGetPageOutput, PageInputUserGetPageDto, OrgListOutput, UserSetManagerInput, UserResetPasswordInput } from '/@/api/admin/data-contracts'
+import { UserGetPageOutput, PageInputUserGetPageDto, OrgListOutput, UserSetManagerInput } from '/@/api/admin/data-contracts'
 import { UserApi } from '/@/api/admin/User'
 import eventBus from '/@/utils/mitt'
 import { auth } from '/@/utils/authFunction'
@@ -110,6 +111,7 @@ import { Session } from '/@/utils/storage'
 
 // 引入组件
 const UserForm = defineAsyncComponent(() => import('./components/user-form.vue'))
+const UserResetPwd = defineAsyncComponent(() => import('./components/user-reset-pwd.vue'))
 const OrgMenu = defineAsyncComponent(() => import('/@/views/admin/org/components/org-menu.vue'))
 const MyDropdownMore = defineAsyncComponent(() => import('/@/components/my-dropdown-more/index.vue'))
 const MySelectInput = defineAsyncComponent(() => import('/@/components/my-select-input/index.vue'))
@@ -118,6 +120,7 @@ const MyLayout = defineAsyncComponent(() => import('/@/components/my-layout/inde
 const { proxy } = getCurrentInstance() as any
 
 const userFormRef = ref()
+const userRestPwdRef = ref()
 
 const storesUseUserInfo = useUserInfo()
 
@@ -174,6 +177,7 @@ onBeforeMount(() => {
   eventBus.off('refreshUser')
 })
 
+//查询分页
 const onQuery = async () => {
   state.loading = true
   const res = await new UserApi().getPage(state.pageInput).catch(() => {
@@ -185,6 +189,7 @@ const onQuery = async () => {
   state.loading = false
 }
 
+//新增
 const onAdd = () => {
   state.userFormTitle = '新增用户'
   userFormRef.value.open({
@@ -193,11 +198,13 @@ const onAdd = () => {
   })
 }
 
+//修改
 const onEdit = (row: UserGetPageOutput) => {
   state.userFormTitle = '编辑用户'
   userFormRef.value.open(row)
 }
 
+//删除
 const onDelete = (row: UserGetPageOutput) => {
   proxy.$modal
     .confirmDelete(`确定要删除【${row.name}】?`)
@@ -208,19 +215,12 @@ const onDelete = (row: UserGetPageOutput) => {
     .catch(() => {})
 }
 
+//重置密码
 const onResetPwd = (row: UserGetPageOutput) => {
-  proxy.$modal
-    .prompt(`确定要给【${row.name}】重置密码?`, { inputPlaceholder: '选填，不填则使用系统默认密码', autofocus: false })
-    .then(async ({ value }: { value: string }) => {
-      const res = await new UserApi().resetPassword({ id: row.id, password: value } as UserResetPasswordInput, { loading: true })
-      if (res?.success) {
-        proxy.$modal.msgSuccess(`重置密码成功，密码为：${res.data}`)
-      }
-      onQuery()
-    })
-    .catch(() => {})
+  userRestPwdRef.value.open(row)
 }
 
+//设置或取消主管
 const onSetManager = (row: UserGetPageOutput) => {
   if (!((state.pageInput.filter?.orgId as number) > 0)) {
     proxy.$modal.msgWarning('请选择部门')
@@ -238,6 +238,7 @@ const onSetManager = (row: UserGetPageOutput) => {
     .catch(() => {})
 }
 
+//启用或禁用
 const onSetEnable = (row: UserGetPageOutput & { loading: boolean }) => {
   return new Promise((resolve, reject) => {
     proxy.$modal
@@ -264,6 +265,7 @@ const onSetEnable = (row: UserGetPageOutput & { loading: boolean }) => {
   })
 }
 
+//一键登录
 const onOneClickLogin = (row: UserGetPageOutput) => {
   proxy.$modal
     .confirmDelete(`确定要一键登录【${row.name}】?`)

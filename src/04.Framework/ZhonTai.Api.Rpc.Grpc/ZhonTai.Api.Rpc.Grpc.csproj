@@ -12,15 +12,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Grpc.Core.Api" Version="2.56.0" />
-		<PackageReference Include="Grpc.Net.ClientFactory" Version="2.56.0" />
-		<PackageReference Include="Grpc.AspNetCore.Server" Version="2.56.0" />
+		<PackageReference Include="Grpc.Core.Api" Version="2.59.0" />
+		<PackageReference Include="Grpc.Net.ClientFactory" Version="2.59.0" />
+		<PackageReference Include="Grpc.AspNetCore.Server" Version="2.59.0" />
 		<PackageReference Include="protobuf-net.Grpc" Version="1.1.1" />
 		<PackageReference Include="protobuf-net.Grpc.AspNetCore" Version="1.1.1" />
 		<PackageReference Include="protobuf-net.Grpc.AspNetCore.Reflection" Version="1.1.1" />
 		<PackageReference Include="protobuf-net.Grpc.ClientFactory" Version="1.1.1" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-		<PackageReference Include="System.ServiceModel.Primitives" Version="6.0.0" />
+		<PackageReference Include="System.ServiceModel.Primitives" Version="6.2.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>

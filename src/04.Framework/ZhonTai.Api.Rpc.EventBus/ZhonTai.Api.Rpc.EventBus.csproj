@@ -4,7 +4,6 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<DocumentationFile>ZhonTai.Api.Core.xml</DocumentationFile>
 		<NoWarn>1701;1702;1591;8632</NoWarn>
 	</PropertyGroup>
 
@@ -13,13 +12,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="DotNetCore.CAP" Version="7.2.1" />
-		<PackageReference Include="DotNetCore.CAP.Dashboard" Version="7.2.1" />
+		<PackageReference Include="DotNetCore.CAP" Version="7.2.2" />
+		<PackageReference Include="DotNetCore.CAP.Dashboard" Version="7.2.2" />
 
-		<PackageReference Include="DotNetCore.CAP.MySql" Version="7.2.1" />
-		<PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="7.2.1" />
+		<PackageReference Include="DotNetCore.CAP.MySql" Version="7.2.2" />
+		<PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="7.2.2" />
 
-		<PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="7.2.1" />
+		<PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="7.2.2" />
 		<PackageReference Include="Savorboard.CAP.InMemoryMessageQueue" Version="7.0.0" />
 	</ItemGroup>
 

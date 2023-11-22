@@ -231,6 +231,18 @@ export function verifyPassword(val: string) {
 }
 
 /**
+ * 混合密码 (字母+数字+可选特殊字符，长度在6-16之间)
+ * @param val 当前值字符串
+ * @returns 返回 true: 强密码正确
+ */
+export function verifyPasswordHybrid(val: string) {
+  // false: 混合密码不正确
+  if (!/^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d!@#$%^&.*]{6,16}$/.test(val)) return false
+  // true: 混合密码正确
+  else return true
+}
+
+/**
  * 强密码 (字母+数字+特殊字符，长度在6-16之间)
  * @param val 当前值字符串
  * @returns 返回 true: 强密码正确

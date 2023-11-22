@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZhonTai.Api.Rpc.Grpc</name>
+    </assembly>
+    <members>
+        <member name="T:ZhonTai.Api.Rpc.Grpc.ProtoTypes.GrpcResponse`1">
+            <summary>
+            Grpc响应
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Grpc.ProtoTypes.GrpcResponse`1.Success">
+            <summary>
+            是否成功标记
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Grpc.ProtoTypes.GrpcResponse`1.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Grpc.ProtoTypes.GrpcResponse`1.Msg">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Rpc.Grpc.ProtoTypes.GrpcResponse`1.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Grpc.ProtoTypes.ProtoBoolean">
+            <summary>
+            ProtoBoolean 表示 Grpc 请求或响应中的 bool
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Grpc.ProtoTypes.ProtoDateTime">
+            <summary>
+            ProtoDateTime 表示 Grpc 请求或响应中的 DateTime
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Grpc.ProtoTypes.ProtoDecimal">
+            <summary>
+            ProtoDecimal 表示 Grpc 请求或响应中的 decimal
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Grpc.ProtoTypes.ProtoInt">
+            <summary>
+            ProtoInt 表示 Grpc 请求或响应中的 int
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Grpc.ProtoTypes.ProtoList`1">
+            <summary>
+            ProtoList 表示 Grpc 请求或响应中的 List
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Grpc.ProtoTypes.ProtoLong">
+            <summary>
+            ProtoLong 表示 Grpc 请求或响应中的 long
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Rpc.Grpc.ProtoTypes.ProtoString">
+            <summary>
+            ProtoString 表示 Grpc 请求或响应中的 string
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -23,9 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZhonTai.Api.Rpc.HttpApi", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZhonTai.Plugin.Cache", "src\05.Plugins\ZhonTai.Plugin.Cache\ZhonTai.Plugin.Cache.csproj", "{BBFEF5CD-1780-4A5F-85D1-8193E6BE0C46}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZhonTai.Module.App.Host", "src\03.Modules\app\ZhonTai.Module.App\src\hosts\ZhonTai.Module.App.Host\ZhonTai.Module.App.Host.csproj", "{F3E808A3-EA7E-4451-9317-0083910ACAA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZhonTai.Module.App.Host", "src\03.Modules\app\ZhonTai.Module.App.Host\ZhonTai.Module.App.Host.csproj", "{F3E808A3-EA7E-4451-9317-0083910ACAA9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZhonTai.Module.App.Api", "src\03.Modules\app\ZhonTai.Module.App\src\platform\ZhonTai.Module.App.Api\ZhonTai.Module.App.Api.csproj", "{69ABD285-A8E4-454E-ABCA-C474225B2C5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZhonTai.Module.App.Api", "src\03.Modules\app\ZhonTai.Module.App.Api\ZhonTai.Module.App.Api.csproj", "{69ABD285-A8E4-454E-ABCA-C474225B2C5D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cache", "Cache", "{C8AE841B-E7C9-40AC-942B-CDC349C232C5}"
 EndProject
@@ -43,6 +43,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Gateways", "02.Gateways"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.SlnFiles", "01.SlnFiles", "{A2D470C1-9AE8-4960-B71D-D30F0428A09A}"
 	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
 		build\pkg.props = build\pkg.props
 		tye.yaml = tye.yaml
 		ZhonTai.sln.EasyRun.json = ZhonTai.sln.EasyRun.json

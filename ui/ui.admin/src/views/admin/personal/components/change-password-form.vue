@@ -23,9 +23,10 @@
               :rules="[
                 { required: true, message: '请输入新密码', trigger: ['blur', 'change'] },
                 { validator: testNewPassword, trigger: ['blur', 'change'] },
+                { validator: validatorPwd, trigger: ['blur', 'change'] },
               ]"
             >
-              <el-input v-model="form.newPassword" show-password autocomplete="off" clearable />
+              <el-input v-model="form.newPassword" show-password autocomplete="off" clearable @input="onInputNewPassword" />
             </el-form-item>
           </el-col>
           <el-col :span="24">
@@ -37,7 +38,7 @@
                 { validator: testConfirmPassword, trigger: ['blur', 'change'] },
               ]"
             >
-              <el-input v-model="form.confirmPassword" show-password autocomplete="off" clearable />
+              <el-input v-model="form.confirmPassword" show-password autocomplete="off" clearable @input="onInputConfirmPassword" />
             </el-form-item>
           </el-col>
         </el-row>
@@ -56,6 +57,8 @@
 import { reactive, toRefs, ref } from 'vue'
 import { UserChangePasswordInput } from '/@/api/admin/data-contracts'
 import { UserApi } from '/@/api/admin/User'
+import { verifyCnAndSpace } from '/@/utils/toolsValidate'
+import { validatorPwd } from '/@/utils/validators'
 
 defineProps({
   title: {
@@ -75,7 +78,7 @@ const { form } = toRefs(state)
 // 新密码验证器
 const testNewPassword = (rule: any, value: any, callback: any) => {
   if (value) {
-    if (state.form.confirmPassword !== '') {
+    if (state.form.confirmPassword) {
       formRef.value.validateField('confirmPassword')
     }
     callback()
@@ -86,16 +89,27 @@ const testNewPassword = (rule: any, value: any, callback: any) => {
 const testConfirmPassword = (rule: any, value: any, callback: any) => {
   if (value) {
     if (value !== state.form.newPassword) {
-      callback(new Error('新密码和确认密码不一致!'))
+      callback(new Error('确认密码和新密码不一致'))
     } else {
       callback()
     }
   }
 }
 
+// 输入新密码
+const onInputNewPassword = (val: string) => {
+  state.form.newPassword = verifyCnAndSpace(val)
+}
+
+// 输入确认密码
+const onInputConfirmPassword = (val: string) => {
+  state.form.confirmPassword = verifyCnAndSpace(val)
+}
+
 // 打开对话框
 const open = async () => {
   state.showDialog = true
+  state.form = {} as UserChangePasswordInput
 }
 
 // 取消

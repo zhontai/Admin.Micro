@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZhonTai.Api.Rpc.HttpApi</name>
+    </assembly>
+    <members>
+        <member name="T:ZhonTai.Api.Rpc.HttpApi.Handlers.ResponseDelegatingHandler">
+            <summary>
+            响应处理器
+            </summary>
+        </member>
+    </members>
+</doc>
