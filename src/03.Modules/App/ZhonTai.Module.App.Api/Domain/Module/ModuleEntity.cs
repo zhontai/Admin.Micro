@@ -1,5 +1,4 @@
 using FreeSql.DataAnnotations;
-using System;
 using ZhonTai.Api.Core.Entities;
 
 namespace ZhonTai.Module.App.Api.Domain.Module

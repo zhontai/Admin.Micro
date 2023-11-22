@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using ZhonTai.Api.Core;
 using ZhonTai.Api.Core.Base;
 using ZhonTai.Api.Core.GrpcServices;

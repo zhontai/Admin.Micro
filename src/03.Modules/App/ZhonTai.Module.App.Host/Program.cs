@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using ZhonTai;
+﻿using ZhonTai;
 using ZhonTai.Api.Core;
 using ZhonTai.Api.Core.Configs;
 using ZhonTai.Api.Core.Startup;

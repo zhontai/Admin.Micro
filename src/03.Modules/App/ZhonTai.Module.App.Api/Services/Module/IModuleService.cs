@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using ZhonTai.Api.Rpc.Dtos;
+﻿using ZhonTai.Api.Rpc.Dtos;
 using ZhonTai.Module.App.Api.Domain.Module.Dto;
 using ZhonTai.Module.App.Api.Services.Module.Input;
 using ZhonTai.Module.App.Api.Services.Module.Output;

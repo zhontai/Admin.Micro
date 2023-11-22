@@ -21,10 +21,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\04.framework\ZhonTai.Api.Core\ZhonTai.Api.Core.csproj" />
-	  <ProjectReference Include="..\..\..\04.framework\ZhonTai.Api.DynamicApi\ZhonTai.Api.DynamicApi.csproj" />
+	  <ProjectReference Include="..\..\..\04.Framework\ZhonTai.Api.Core\ZhonTai.Api.Core.csproj" />
+	  <ProjectReference Include="..\..\..\04.Framework\ZhonTai.Api.DynamicApi\ZhonTai.Api.DynamicApi.csproj" />
 	  <ProjectReference Include="..\..\..\04.Framework\ZhonTai.Api.Rpc.EventBus\ZhonTai.Api.Rpc.EventBus.csproj" />
-	  <ProjectReference Include="..\..\..\04.framework\ZhonTai.Utils\ZhonTai.Utils.csproj" />
+	  <ProjectReference Include="..\..\..\04.Framework\ZhonTai.Utils\ZhonTai.Utils.csproj" />
 	  <ProjectReference Include="..\ZhonTai.Module.Admin.Contracts\ZhonTai.Module.Admin.Contracts.csproj" />
 	</ItemGroup>
 

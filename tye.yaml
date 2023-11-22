@@ -22,7 +22,7 @@ services:
       port: 11010
       routes: [/doc/admin, /doc/admin/swagger, /cap/admin]
 - name: module-app
-  project: src\03.Modules\App\ZhonTai.Module.App\src\hosts\ZhonTai.Module.App.Host\ZhonTai.Module.App.Host.csproj
+  project: src\03.Modules\App\ZhonTai.Module.App.Host\ZhonTai.Module.App.Host.csproj
   bindings:
     - protocol: http
       port: 11020

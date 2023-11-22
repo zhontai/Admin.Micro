@@ -30,6 +30,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\04.Framework\ZhonTai.Api.Rpc\ZhonTai.Api.Rpc.csproj" />
+	  <ProjectReference Include="..\..\..\04.Framework\ZhonTai.Api.Rpc\ZhonTai.Api.Rpc.csproj" />
 	</ItemGroup>
 </Project>
