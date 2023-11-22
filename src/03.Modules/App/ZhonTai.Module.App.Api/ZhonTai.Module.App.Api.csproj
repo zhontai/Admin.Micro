@@ -1,4 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\..\..\build\pkg.props" />
+	
 	<PropertyGroup>
 		<Description>ZhonTai.Module.App接口库</Description>
 	</PropertyGroup>
@@ -7,6 +9,10 @@
 		<DocumentationFile>ZhonTai.Module.App.Api.xml</DocumentationFile>
 		<NoWarn>1701;1702;1591</NoWarn>
 	</PropertyGroup>
+	
+	<ItemGroup>
+		<None Include="../../../../logo.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="Repositories\Module\" />

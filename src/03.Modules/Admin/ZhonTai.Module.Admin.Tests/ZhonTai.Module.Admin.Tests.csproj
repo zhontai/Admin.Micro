@@ -2,6 +2,8 @@
 	<PropertyGroup>
 		<Description>中台测试库</Description>
 		<IsPackable>false</IsPackable>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 
   <ItemGroup>

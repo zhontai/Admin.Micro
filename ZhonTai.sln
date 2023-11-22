@@ -43,7 +43,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Gateways", "02.Gateways"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.SlnFiles", "01.SlnFiles", "{A2D470C1-9AE8-4960-B71D-D30F0428A09A}"
 	ProjectSection(SolutionItems) = preProject
-		src\Directory.Build.props = src\Directory.Build.props
 		build\pkg.props = build\pkg.props
 		tye.yaml = tye.yaml
 		ZhonTai.sln.EasyRun.json = ZhonTai.sln.EasyRun.json
