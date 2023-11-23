@@ -66,7 +66,7 @@ public class DbConfig
     /// <summary>
     /// 同步数据地址
     /// </summary>
-    public string SyncDataPath { get; set; } = "InitData/Admin";
+    public string SyncDataPath { get; set; } = "InitData";
 
     /// <summary>
     /// 同步数据包含表列表

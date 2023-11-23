@@ -16,7 +16,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="..\..\..\..\..\..\04.Framework\Assets\**\*">
+		<None Include="..\..\..\04.Framework\Assets\**\*">
 			<Link>%(RecursiveDir)/%(FileName)%(Extension)</Link>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>

@@ -110,7 +110,7 @@ public abstract class SyncData
         }
     }
 
-    protected virtual T[] GetData<T>(bool isTenant = false, string path = "InitData/Admin")
+    protected virtual T[] GetData<T>(bool isTenant = false, string path = "InitData")
     {
         var table = typeof(T).GetCustomAttributes(typeof(TableAttribute), false).FirstOrDefault() as TableAttribute;
         var fileName = $"{table.Name}{(isTenant ? ".tenant" : "")}.json";

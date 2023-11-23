@@ -4,9 +4,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using System;
 using System.Text.Encodings.Web;
-using System.Threading.Tasks;
 using ZhonTai.Utils.Extensions;
 using StatusCodes = ZhonTai.Api.Core.Enums.StatusCodes;
 
@@ -17,12 +15,20 @@ namespace ZhonTai.Api.Core.Auth;
 /// </summary>
 public class ResponseAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
 {
+#if NET8_0_OR_GREATER
     public ResponseAuthenticationHandler(
         IOptionsMonitor<AuthenticationSchemeOptions> options,
         ILoggerFactory logger,
-        UrlEncoder encoder,
-        ISystemClock clock
-    ) : base(options, logger, encoder, clock)
+        UrlEncoder encoder
+    ) : base(options, logger, encoder)
+#else
+    public ResponseAuthenticationHandler(
+       IOptionsMonitor<AuthenticationSchemeOptions> options,
+       ILoggerFactory logger,
+       UrlEncoder encoder,
+       ISystemClock systemClock
+   ) : base(options, logger, encoder, systemClock)
+#endif
     {
     }
 

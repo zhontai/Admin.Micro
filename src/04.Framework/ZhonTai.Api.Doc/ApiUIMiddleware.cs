@@ -40,13 +40,11 @@ namespace ZhonTai.Api.Doc
 
             _staticFileMiddleware = ApiUIMiddleware.CreateStaticFileMiddleware(next, hostingEnv, loggerFactory, options);
 
-            _jsonSerializerOptions = new JsonSerializerOptions();
-#if NET6_0
-            _jsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-#else
-            _jsonSerializerOptions.IgnoreNullValues = true;
-#endif
-            _jsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+            _jsonSerializerOptions = new JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            };
             _jsonSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase, false));
         }
 

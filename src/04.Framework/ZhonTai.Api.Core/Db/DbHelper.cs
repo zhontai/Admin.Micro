@@ -27,9 +27,9 @@ public class DbHelper
     /// <summary>
     /// 偏移时间
     /// </summary>
-    private static TimeSpan timeOffset;
+    private static TimeSpan _timeOffset;
 
-    public static TimeSpan TimeOffset { get => timeOffset; set => timeOffset = value; }
+    public static TimeSpan TimeOffset { get => _timeOffset; set => _timeOffset = value; }
 
     /// <summary>
     /// 创建数据库

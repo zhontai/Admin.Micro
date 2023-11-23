@@ -1,14 +1,14 @@
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["/src/hosts/ZhonTai.Module.App.Host/ZhonTai.Module.App.Host.csproj", "/src/hosts/ZhonTai.Module.App.Host/ZhonTai.Module.App.Host.csproj"]
-RUN dotnet restore "/src/hosts/ZhonTai.Module.App.Host/ZhonTai.Module.App.Host.csproj"
+COPY ["/src/03.Modules/App/ZhonTai.Module.App.Host/ZhonTai.Module.App.Host.csproj", "/src/03.Modules/App/ZhonTai.Module.App.Host/ZhonTai.Module.App.Host.csproj"]
+RUN dotnet restore "/src/03.Modules/App/ZhonTai.Module.App.Host/ZhonTai.Module.App.Host.csproj"
 COPY . .
 RUN pwd
-WORKDIR "/src/src/hosts/ZhonTai.Module.App.Host"
+WORKDIR "/src/03.Modules/App/ZhonTai.Module.App.Host"
 ENV NUGET_XMLDOC_MODE none
 RUN pwd
 RUN dotnet restore "ZhonTai.Module.App.Host.csproj" -nowarn:msb3202,nu1503

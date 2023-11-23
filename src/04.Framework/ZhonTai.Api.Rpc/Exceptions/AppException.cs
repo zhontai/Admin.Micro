@@ -1,4 +1,6 @@
-﻿using System.Runtime.Serialization;
+﻿#if NET7_0
+using System.Runtime.Serialization;
+#endif
 
 namespace ZhonTai.Api.Rpc.Exceptions;
 
@@ -15,10 +17,12 @@ public class AppException : Exception
     {
     }
 
+#if NET7_0
     public AppException(SerializationInfo serializationInfo, StreamingContext context)
         : base(serializationInfo, context)
     {
     }
+#endif
 
     public AppException(string message)
         : base(message)
