@@ -89,6 +89,11 @@
         "enable": true,
         //访问路径
         "path": "/health"
+      },
+      //链路追踪
+      "SkyWalking": {
+        //启用
+        "enable": true
       }
     }
   }

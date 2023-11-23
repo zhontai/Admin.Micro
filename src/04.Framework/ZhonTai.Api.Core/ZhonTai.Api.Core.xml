@@ -647,6 +647,11 @@
             健康检查配置
             </summary>
         </member>
+        <member name="P:ZhonTai.Api.Core.Configs.AppConfig.SkyWalking">
+            <summary>
+            链路追踪配置
+            </summary>
+        </member>
         <member name="T:ZhonTai.Api.Core.Configs.SwaggerConfig">
             <summary>
             Swagger配置
@@ -840,6 +845,16 @@
         <member name="P:ZhonTai.Api.Core.Configs.HealthChecksConfig.Path">
             <summary>
             访问路径
+            </summary>
+        </member>
+        <member name="T:ZhonTai.Api.Core.Configs.SkyWalkingConfig">
+            <summary>
+            链路追踪配置
+            </summary>
+        </member>
+        <member name="P:ZhonTai.Api.Core.Configs.SkyWalkingConfig.Enable">
+            <summary>
+            启用
             </summary>
         </member>
         <member name="T:ZhonTai.Api.Core.Configs.AppType">

@@ -100,6 +100,11 @@ public class AppConfig
     /// 健康检查配置
     /// </summary>
     public HealthChecksConfig HealthChecks { get; set; } = new HealthChecksConfig();
+
+    /// <summary>
+    /// 链路追踪配置
+    /// </summary>
+    public SkyWalkingConfig SkyWalking { get; set; } = new SkyWalkingConfig();
 }
 
 /// <summary>
@@ -311,6 +316,17 @@ public class HealthChecksConfig
     /// 访问路径
     /// </summary>
     public string Path { get; set; } = "/health";
+}
+
+/// <summary>
+/// 链路追踪配置
+/// </summary>
+public class SkyWalkingConfig
+{
+    /// <summary>
+    /// 启用
+    /// </summary>
+    public bool Enable { get; set; }
 }
 
 /// <summary>

@@ -113,7 +113,7 @@ public class AppHost
     {
         var envV = Environment.GetEnvironmentVariable("ASPNETCORE_HOSTINGSTARTUPASSEMBLIES");
         Environment.SetEnvironmentVariable("ASPNETCORE_HOSTINGSTARTUPASSEMBLIES", envV + ";SkyAPM.Agent.AspNetCore");
-
+        
         var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
         try
         {
@@ -245,7 +245,8 @@ public class AppHost
         _appHostOptions?.ConfigurePreServices?.Invoke(appHostContext);
 
         //链路追踪
-        services.AddSkyApmExtensions();
+        if(appConfig.SkyWalking.Enable)
+            services.AddSkyApmExtensions();
 
         //健康检查
         services.AddHealthChecks();

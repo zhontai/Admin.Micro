@@ -144,9 +144,7 @@
         </member>
         <member name="M:ZhonTai.Plugin.Cache.MemoryCache.PatternRegex">
             <remarks>
-            Pattern:<br/>
-            <code>\\{.*\\}</code><br/>
-            Explanation:<br/>
+            Pattern explanation:<br/>
             <code>
             ○ Match '{'.<br/>
             ○ Match a character other than '\n' greedily any number of times.<br/>
@@ -161,9 +159,7 @@
         </member>
         <member name="M:ZhonTai.Plugin.Cache.RedisCache.PatternRegex">
             <remarks>
-            Pattern:<br/>
-            <code>\\{.*\\}</code><br/>
-            Explanation:<br/>
+            Pattern explanation:<br/>
             <code>
             ○ Match '{'.<br/>
             ○ Match a character other than '\n' greedily any number of times.<br/>
