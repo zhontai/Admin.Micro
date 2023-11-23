@@ -8,7 +8,7 @@ public static class ClaimAttributes
     /// <summary>
     /// 用户Id
     /// </summary>
-    public const string UserId = "sub";
+    public const string UserId = "uid";
 
     /// <summary>
     /// 用户名
